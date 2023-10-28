@@ -650,7 +650,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =15, align = 'C')
         pdf.ln(0.25)
         s5 = ('The module '+str(f_name[0])+' was evaluated by '+str(part_c[0])+' A-STEP students during the second term of 2023. Students indicated to have been hosted by '+str(Tutor_cnt[0])+' unique \
-tutors.')
+tutors. We present evaluation questions and outcomes in section 3.1, refer to the next page.')
         pdf.multi_cell(0, 5, txt = str(s5), align = 'L')
         pdf.cell(0, 5, txt = '', ln =15, align = 'C')
         pdf.ln(0.25)
