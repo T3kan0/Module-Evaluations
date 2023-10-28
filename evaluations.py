@@ -14,7 +14,7 @@ from fpdf import FPDF
 from datetime import date
 import matplotlib.pyplot as plt
 st.set_page_config(
-    page_title="MARS",
+    page_title="Evaluations",
     page_icon="🧊",
     layout="wide",
     initial_sidebar_state="expanded",
