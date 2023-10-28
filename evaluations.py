@@ -850,7 +850,7 @@ tutors.')
                 btn = st.download_button(
                 label=":red[Download PDF Report]",
                 data=file,
-                file_name='A_STEP_'+str(f_name[0])+'ER_2232.pdf',
+                file_name='A_STEP_'+str(f_name[0])+'_ER_2232.pdf',
                 mime="file/pdf"
                   )  
                 st.success('Report Ready for Download', icon="✅")
