@@ -50,10 +50,8 @@ with st.expander(":blue[Read More ⤵️]"):
 cola = st.columns([1.00], gap='small')
 if eval_files:
     st.sidebar.success('File Uploaded', icon="✅")
-else:
-    with cola:
-        #st.write(' ')
-        st.markdown("![Alt Text](https://i.postimg.cc/hP87QCG1/people-hold-arrow.png)")
+else        #st.write(' ')
+    st.markdown("![Alt Text](https://i.postimg.cc/hP87QCG1/people-hold-arrow.png)")
 
 
 
@@ -282,9 +280,9 @@ if eval_files is not None:
         part_c.append(second_column)
         n_file.append(df)
         f_name.append(fname)
-        with cola:
-            st.write(':blue[Uploaded File Preview:👇]')
-            st.write(df.head())
+        #with cola:
+        st.write(':blue[Uploaded File Preview:👇]')
+        st.write(df.head())
         #Eval = st.button(':red[Evaluate Module!!]')
     # Extract tutor names and counts
     tutor_names = list(selected_tut.keys())
