@@ -52,8 +52,8 @@ if eval_files:
     st.sidebar.success('File Uploaded', icon="✅")
 else:        
     #st.write(' ')
-    st.markdown("![Alt Text](https://i.postimg.cc/hP87QCG1/people-hold-arrow.png)")
-
+    #st.markdown("![Alt Text](https://i.postimg.cc/hP87QCG1/people-hold-arrow.png)")
+    st.markdown('<p style="text-align: center;"><img src="https://i.postimg.cc/1tMyy904/eval-logo.png" alt="Alt Text"></p>', unsafe_allow_html=True)
 
 
 if eval_files is not None:
