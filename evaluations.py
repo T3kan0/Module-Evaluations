@@ -52,7 +52,8 @@ if eval_files:
     st.sidebar.success('File Uploaded', icon="✅")
 else:
     with cola:
-        st.write(' ')
+        #st.write(' ')
+        st.markdown("![Alt Text](https://i.postimg.cc/hP87QCG1/people-hold-arrow.png)")
 if eval_files is not None:
     n_file = []
     f_name = []
