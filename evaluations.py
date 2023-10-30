@@ -50,7 +50,8 @@ with st.expander(":blue[Read More ⤵️]"):
 cola = st.columns([1.00], gap='small')
 if eval_files:
     st.sidebar.success('File Uploaded', icon="✅")
-else        #st.write(' ')
+else        
+    #st.write(' ')
     st.markdown("![Alt Text](https://i.postimg.cc/hP87QCG1/people-hold-arrow.png)")
 
 
