@@ -47,11 +47,12 @@ with st.expander(":blue[Read More ⤵️]"):
          The practice is helping the programme to address common concerns that students might have regarding the service they obtain from the programme,\
          how it can benefit by improving quality assurance, monitoring, and optimizing student-learning opportunities.')
       
-
+cola = st.columns([1.00], gap='small')
 if eval_files:
     st.sidebar.success('File Uploaded', icon="✅")
 else:
-    st.write(' ')
+    with cola:
+        st.write(' ')
 if eval_files is not None:
     n_file = []
     f_name = []
@@ -277,8 +278,9 @@ if eval_files is not None:
         part_c.append(second_column)
         n_file.append(df)
         f_name.append(fname)
-        st.write(':blue[Uploaded File Preview:👇]')
-        st.write(df.head())
+        with cola:
+            st.write(':blue[Uploaded File Preview:👇]')
+            st.write(df.head())
         #Eval = st.button(':red[Evaluate Module!!]')
     # Extract tutor names and counts
     tutor_names = list(selected_tut.keys())
