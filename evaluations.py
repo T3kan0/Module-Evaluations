@@ -26,7 +26,8 @@ st.sidebar.markdown("![Alt Text](https://i.postimg.cc/gJzPdRYd/logio.png)")
 eval_files = st.sidebar.file_uploader(':blue[**Upload File**:👇]',
                                      type=['xlsx', 'csv'],
                                      accept_multiple_files=True)
-st.markdown("<h3 style='text-align: center; color: darkred;'>A_STEP Tutorial & Tutor Evaluations (A.T & T.E. - v1.0.0) 🧑🏼‍🎓 👨🏽‍🎓</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center; color: darkred;'>A_STEP Tutorial & Tutor Evaluations 🧑🏼‍🎓 👨🏽‍🎓</h3>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: darkred;'> (A.T & T.E. - v1.0.0) 🧑🏼‍🎓 👨🏽‍🎓</h2>", unsafe_allow_html=True)
 
 col1, col2 = st.columns([0.20, 0.80], gap='small')
 with col1:
