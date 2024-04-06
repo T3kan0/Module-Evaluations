@@ -38,11 +38,11 @@ with col2:
 
 # Your expander element
 with st.expander(":blue[Read More ⤵️]"):
-    st.write('Welcome to the Evaluation of A-STEP Attended Modules. Programme evaluation is a valuable tool for the coninued success of\
-         A-STEP, positioned in the UFS academic faculties as a student academic support service.\
+    st.write('Welcome to the Evaluation of A_STEP Tutorials and Tutors. Programme evaluation is a valuable tool for the coninued success of\
+         A_STEP, positioned in the UFS academic faculties as a student academic support service.\
          This is particularly imperative when seeking to strengthen the quality of the programme and improve academic outcomes\
          for the programme, and the students it is serving. Therefore, programme evaluation provides basic questions about a programmes’s effectiveness,\
-         and evaluation data can be used to improve programme services. At the core of the evaluation in the SLS programme is to give students a platform\
+         and evaluation data can be used to improve programme services. At the core of the evaluation in the SLE programme is to give students a platform\
          to reflect on the experiences on the online tutorials they have attended, but it also allows those who did not attend a space to provide their views.\
          The practice is helping the programme to address common concerns that students might have regarding the service they obtain from the programme,\
          how it can benefit by improving quality assurance, monitoring, and optimizing student-learning opportunities.')
@@ -869,7 +869,7 @@ st.sidebar.write(':grey[**Prepare and Upload ***.xlsx*** Evaluation Survey Files
 st.sidebar.write('- :orange[Generate Report ⤵️]')
 st.sidebar.write('- :orange[Download PDF Report 🛸]')
         
-st.sidebar.markdown("<h1 style='text-align: center; color: #090257;'>Contact CTL & A-STEP</h1>", unsafe_allow_html=True)
+st.sidebar.markdown("<h1 style='text-align: center; color: #090257;'>Contact CTL & A_STEP</h1>", unsafe_allow_html=True)
 st.sidebar.write('📭 E: :orange[mbonanits@ufs.ac.za]')
 st.sidebar.write('📭 E: :orange[emohoanyane@ufs.ac.za]')
 st.sidebar.write('🌐 :blue[www.ufs.ac.za/ctl]')
