@@ -1,3 +1,12 @@
 openpyxl
 fpdf
 matplotlib
+wordcloud
+collections
+transformers
+scipy
+tqdm
+nltk
+torch
+string
+seaborn
