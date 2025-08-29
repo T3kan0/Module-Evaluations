@@ -3,5 +3,4 @@ fpdf
 matplotlib
 streamlit
 wordcloud==1.9.4
-nltk
-string
+nltk==3.9.1
