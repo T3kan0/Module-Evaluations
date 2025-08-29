@@ -22,15 +22,14 @@ from nltk.corpus import stopwords
 import os
 import string
 
-# Create a local nltk_data folder inside your app
+# Set up a local nltk_data directory inside your app
 nltk_data_dir = os.path.join(os.getcwd(), "nltk_data")
-if not os.path.exists(nltk_data_dir):
-    os.makedirs(nltk_data_dir)
+os.makedirs(nltk_data_dir, exist_ok=True)
 
-# Download 'punkt' to that folder
+# Download 'punkt' to that directory
 nltk.download('punkt', download_dir=nltk_data_dir)
 
-# Append this folder to nltk's search path
+# Append the folder to NLTK's search path
 nltk.data.path.append(nltk_data_dir)
 
 st.set_page_config(
