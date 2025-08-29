@@ -1,4 +1,8 @@
 openpyxl
 fpdf
 matplotlib
-
+streamlit
+wordcloud
+collections
+nltk
+string
