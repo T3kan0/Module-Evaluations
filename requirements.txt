@@ -4,3 +4,4 @@ matplotlib
 streamlit
 wordcloud==1.9.4
 nltk==3.9.1
+seaborn
