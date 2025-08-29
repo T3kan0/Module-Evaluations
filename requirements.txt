@@ -2,7 +2,6 @@ openpyxl
 fpdf
 matplotlib
 streamlit
-wordcloud
-collections
+wordcloud==1.9.4
 nltk
 string
