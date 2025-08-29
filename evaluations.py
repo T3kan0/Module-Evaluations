@@ -20,7 +20,7 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 # Download Punkt tokenizer if not already present
-nltk.download('punkt')
+#nltk.download('punkt')
 import string
 
 st.set_page_config(
