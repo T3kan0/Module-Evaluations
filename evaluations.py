@@ -16,11 +16,12 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from wordcloud import WordCloud
 from collections import Counter
+import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-import string
 # Download Punkt tokenizer if not already present
 nltk.download('punkt')
+import string
 
 st.set_page_config(
     page_title="Evaluations",
