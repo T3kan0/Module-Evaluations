@@ -20,7 +20,7 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 # Download Punkt tokenizer if not already present
-#nltk.download('punkt')
+nltk.download('punkt')
 import string
 
 st.set_page_config(
@@ -1064,8 +1064,7 @@ if eval_files is not None:
 
             # Join the list of words into a single string
             text = ' '.join(all_words)
-            # Download Punkt tokenizer if not already present
-            nltk.download('punkt')
+   
             # Count the frequency of each word
             word_freq = Counter(all_words)
 
