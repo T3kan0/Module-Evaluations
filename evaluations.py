@@ -19,9 +19,19 @@ from collections import Counter
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-# Download Punkt tokenizer if not already present
-nltk.download('punkt')
+import os
 import string
+
+# Set a directory for NLTK data
+nltk_data_dir = os.path.join(os.getcwd(), "nltk_data")
+if not os.path.exists(nltk_data_dir):
+    os.makedirs(nltk_data_dir)
+
+# Download 'punkt' to that directory
+nltk.download('punkt', download_dir=nltk_data_dir)
+
+# Tell NLTK to look there
+nltk.data.path.append(nltk_data_dir)
 
 st.set_page_config(
     page_title="Evaluations",
