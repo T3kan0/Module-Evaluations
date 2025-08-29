@@ -19,7 +19,8 @@ from collections import Counter
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import string
-
+# Download Punkt tokenizer if not already present
+nltk.download('punkt')
 
 st.set_page_config(
     page_title="Evaluations",
