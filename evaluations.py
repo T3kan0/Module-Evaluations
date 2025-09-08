@@ -620,9 +620,14 @@ if eval_files is not None:
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('hlangu.png')
 
-        tutorial_quality_outcome = [conduci1_counts, spacious1_counts, inter1_counts,
-                                    interct1_counts, light1_counts, conduci2_counts].count('Yes')
-        print(tutorial_quality_outcome)
+        def collapse_outcome(counts):
+            yes_count = counts.get("Yes", 0)
+            no_count = counts.get("No", 0)
+            if yes_count > no_count:
+                return "Yes"
+            else:
+                return "No"
+
 
 
 ########## Tutor Types
