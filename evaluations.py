@@ -1268,26 +1268,16 @@ if eval_files is not None:
 ### Automated Paragraphs: Narratives
 
         # Q 17
-        # Score = 0
-        tutor_case1 = ('Overall tutorial quality was very poor. Students reported no positive aspects of facilitation, \
-        with tutors failing to provide support, inclusivity, or confidence-building opportunities. Urgent intervention is \
-        required to strengthen both tutor preparedness and student engagement.')
-        # Score = 1 - 2
-        tutor_case1 = ('Overall tutorial quality was poor. While a few isolated strengths were noted, such as limited support \
-        or punctuality, these were overshadowed by widespread weaknesses. Tutors struggled to create an inclusive, supportive,\
-        and engaging learning environment. Focused training and stronger accountability measures are necessary.')
-        # Score 3 - 4
-        tutor_case1 = ('Tutorial quality was moderate. Students experienced a balance of strengths and weaknesses:\
-        some aspects of support and facilitation worked well, while others fell short. Improvements in consistency,\
-        inclusivity, and academic engagement would significantly raise the overall standard.')
-        # Score = 5 - 6
-        tutor_case1 = ('Overall tutorial quality was good. Tutors demonstrated several strengths, including preparedness,\
-        academic support, and engagement with student progress. However, some areas still need attention to ensure all students\
-        consistently benefit from tutorials. Ongoing tutor development will help sustain and improve this positive performance.')
-        # Score = 7
-        tutor_case1 = ('Tutorial quality was excellent. Tutors were punctual, supportive, inclusive, and committed to student success.\
-        Students felt confident, well-assisted, and academically encouraged. This level of performance should be sustained and used as a\
-        benchmark for best practice across the program.')
+        # Score = 0, 'Very Poor'
+
+        # Score = 1 - 2, 'Poor'
+
+        # Score 3 - 4, 'Moderate'
+
+        # Score = 5 - 6, 'Good'
+
+        # Score = 7, 'Excellent'
+
 
         paragraphs = {
             "Very Poor": "Overall tutorial quality was very poor. Students reported no positive aspects of facilitation, \
