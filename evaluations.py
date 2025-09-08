@@ -642,6 +642,11 @@ if eval_files is not None:
             collapse_outcome(conduci2_counts)
         ]
 
+        yes_count = tutorial_quality_outcome.count("Yes")
+        no_count = tutorial_quality_outcome.count("No")
+
+        print("Yes:", yes_count, "No:", no_count)
+
 ########## Tutor Types
 
         conduci3_counts = df['18: Blackboard collaborate'].value_counts()
