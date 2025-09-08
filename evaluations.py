@@ -621,7 +621,7 @@ if eval_files is not None:
         plt.savefig('hlangu.png')
 
         tutorial_quality_outcome = [conduci1_counts, spacious1_counts, inter1_counts,
-                                    interct1_counts, interct1_counts, light1_counts, conduci2_counts]
+                                    interct1_counts, light1_counts, conduci2_counts]
 
 
 ########## Tutor Types
