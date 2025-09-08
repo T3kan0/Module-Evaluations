@@ -186,9 +186,9 @@ if eval_files is not None:
         
         ### Categoric labels to characterize data outcomes
 
-        positive = ["Agree", "Strongly Agree"]
-        neutral = ["Neutral"]
-        negative = ["Disagree", "Strongly Disagree"]
+        positive_scale = ["Agree", "Strongly Agree"]
+        neutral_scale = ["Neutral"]
+        negative_scale = ["Disagree", "Strongly Disagree"]
 
         
          # Plotting the bar graph
