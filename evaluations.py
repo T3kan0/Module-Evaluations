@@ -148,6 +148,49 @@ if eval_files is not None:
         'Gray': '#95A5A6',
         'Black': '#2C3E50'}
 
+        def collapse_outcome(counts):
+            """
+            Collapse Likert responses into a single outcome.
+            counts: dict with keys like {"Strongly Disagree": x, "Disagree": y, "Neutral": z, "Agree": a, "Strongly Agree": b}
+            Returns one of: Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree
+            """
+            # Likert scale mapping
+            likert_map = {
+                "Strongly Disagree": 1,
+                "Disagree": 2,
+                "Neutral": 3,
+                "Agree": 4,
+                "Strongly Agree": 5
+            }
+    
+            total_votes = sum(counts.values())
+            if total_votes == 0:
+                return "Neutral"  # fallback if no responses
+    
+            # Weighted average
+            score_sum = sum(likert_map[resp] * count for resp, count in counts.items())
+            avg_score = score_sum / total_votes
+    
+            # Convert back to label by rounding
+            if avg_score < 1.5:
+                return "Strongly Disagree"
+            elif avg_score < 2.5:
+                return "Disagree"
+            elif avg_score < 3.5:
+                return "Neutral"
+            elif avg_score < 4.5:
+                return "Agree"
+            else:
+                return "Strongly Agree"
+
+        
+        ### Categoric labels to characterize data outcomes
+
+        positive = ["Agree", "Strongly Agree"]
+        neutral = ["Neutral"]
+        negative = ["Disagree", "Strongly Disagree"]
+
+        
          # Plotting the bar graph
         fig0, ax0 = plt.subplots()
         # Bar plot for number of unique students
@@ -620,16 +663,6 @@ if eval_files is not None:
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('hlangu.png')
 
-        ## Function for collapsing the outcomes of Yes/No questions into either Yes or No.
-        # If the number of yes are more than no, then the outcome will yes, otherwise it will be No. 
-        
-        def collapse_outcome(counts):
-            yes_count = counts.get("Yes", 0)
-            no_count = counts.get("No", 0)
-            if yes_count > no_count:
-                return "Yes"
-            else:
-                return "No"
 
         # This list will be used for determining the string to be used to choose the paragraph that describes the tutorial quality evaluations outcome.
         
@@ -642,8 +675,6 @@ if eval_files is not None:
             collapse_outcome(conduci2_counts)
         ]
 
-        yes_count = tutorial_quality_outcome.count("Yes")
-        #no_count = tutorial_quality_outcome.count("No")
 
 
 ########## Tutor Types
@@ -1268,49 +1299,37 @@ if eval_files is not None:
 ### Automated Paragraphs: Narratives
 
         # Q 17
-        # Score = 0, 'Very Poor'
+        # Score = 0, 'Strongly Disagree'
 
-        # Score = 1 - 2, 'Poor'
+        # Score = 1 - 2, 'Disagree'
 
-        # Score 3 - 4, 'Moderate'
+        # Score 3 - 4, 'Neutral'
 
-        # Score = 5 - 6, 'Good'
+        # Score = 5 - 6, 'Agree'
 
-        # Score = 7, 'Excellent'
+        # Score = 7, 'Strongly Agree'
 
 
-        paragraphs = {
-            "Very Poor": "Overall tutorial quality was very poor. Students reported no positive aspects of facilitation, \
-            with tutors failing to provide support, inclusivity, or confidence-building opportunities. Urgent intervention is \
-            required to strengthen both tutor preparedness and student engagement.",
-            "Poor": "Overall tutorial quality was poor. While a few isolated strengths were noted, such as limited support \
-            or punctuality, these were overshadowed by widespread weaknesses. Tutors struggled to create an inclusive, supportive,\
-            and engaging learning environment. Focused training and stronger accountability measures are necessary.",
-            "Moderate": "Tutorial quality was moderate. Students experienced a balance of strengths and weaknesses:\
-            some aspects of support and facilitation worked well, while others fell short. Improvements in consistency,\
-            inclusivity, and academic engagement would significantly raise the overall standard.",
-            "Good": "Overall tutorial quality was good. Tutors demonstrated several strengths, including preparedness,\
-            academic support, and engagement with student progress. However, some areas still need attention to ensure all students\
-            consistently benefit from tutorials. Ongoing tutor development will help sustain and improve this positive performance.",
-            "Excellent": "Tutorial quality was excellent. Tutors were punctual, supportive, inclusive, and committed to student success.\
-            Students felt confident, well-assisted, and academically encouraged. This level of performance should be sustained and used as a\
-            benchmark for best practice across the program."
+        tutorial_quality_paragraphs = {
+            "Strongly Disagree": "Overall tutorial quality was very poor. Students strongly disagreed with the effectiveness of the tutorials, "
+                         "indicating serious concerns with tutor preparedness, support, and facilitation. Immediate intervention and "
+                         "comprehensive tutor development are urgently required.",
+            "Disagree": "Tutorial quality was poor. Many students felt that the tutorials did not adequately support their learning needs. "
+                        "While some aspects may have been partially effective, the overall perception was negative, highlighting the need "
+                        "for targeted improvements in tutor performance and facilitation.",
+            "Neutral": "Tutorial quality was moderate. Students expressed mixed opinions, with no clear consensus on strengths or weaknesses. "
+                       "This suggests inconsistency in tutorial delivery, where some sessions may have been effective while others fell short. "
+                       "Focused efforts are needed to ensure greater consistency and reliability across all tutorials.",
+            "Agree": "Overall tutorial quality was good. Students generally agreed that the tutorials were effective, supportive, and beneficial "
+                     "to their academic progress. While there is still room for refinement, the majority of students experienced positive outcomes "
+                     "from the tutorial program.",
+            "Strongly Agree": "Tutorial quality was excellent. Students strongly agreed that the tutorials met their academic needs, with tutors "
+                      "providing effective support, inclusivity, and encouragement. The program demonstrated a high standard of facilitation, "
+                      "and maintaining this level of quality should be a priority."
         }
 
-        if yes_count == 0:
-            band = "Very Poor"
-        elif yes_count in [1, 2]:
-            band = "Poor"
-        elif yes_count in [3, 4]:
-            band = "Moderate"
-        elif yes_count in [5, 6]:
-            band = "Good"
-        elif yes_count == 7:
-            band = "Excellent"
 
-        selected_paragraph = paragraphs[band]
 
-        print(selected_paragraph)
                
 else:
     st.write(' ')
