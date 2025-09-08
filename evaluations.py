@@ -1289,6 +1289,29 @@ if eval_files is not None:
         Students felt confident, well-assisted, and academically encouraged. This level of performance should be sustained and used as a\
         benchmark for best practice across the program.')
 
+        paragraphs = {
+            "Very Poor": "Overall tutorial quality was very poor. Students reported no positive aspects of facilitation, \
+            with tutors failing to provide support, inclusivity, or confidence-building opportunities. Urgent intervention is \
+            required to strengthen both tutor preparedness and student engagement.",
+            "Poor": "Overall tutorial quality was poor. While a few isolated strengths were noted, such as limited support \
+            or punctuality, these were overshadowed by widespread weaknesses. Tutors struggled to create an inclusive, supportive,\
+            and engaging learning environment. Focused training and stronger accountability measures are necessary.",
+            "Moderate": "Tutorial quality was moderate. Students experienced a balance of strengths and weaknesses:\
+            some aspects of support and facilitation worked well, while others fell short. Improvements in consistency,\
+            inclusivity, and academic engagement would significantly raise the overall standard.",
+            "Good": "Overall tutorial quality was good. Tutors demonstrated several strengths, including preparedness,\
+            academic support, and engagement with student progress. However, some areas still need attention to ensure all students\
+            consistently benefit from tutorials. Ongoing tutor development will help sustain and improve this positive performance.",
+            "Excellent": "Tutorial quality was excellent. Tutors were punctual, supportive, inclusive, and committed to student success.\
+            Students felt confident, well-assisted, and academically encouraged. This level of performance should be sustained and used as a\
+            benchmark for best practice across the program."
+        }
+
+        selected_paragraph = paragraphs[band]
+
+        print(selected_paragraph)
+
+
 
         if yes_count == 0:
             band = "Very Poor"
