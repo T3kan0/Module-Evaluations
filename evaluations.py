@@ -1240,6 +1240,14 @@ if eval_files is not None:
         plt.tight_layout()
         plt.savefig('word_count2.png')
 
+### Automated Paragraphs: Narratives
+
+        # Q 17
+        tutor_case1 = ('The quality of the tutorial was low based on tutor preparedness and facilitation. \
+        While tutors were punctual and started sessions on time, they failed to provide adequate academic support,\
+        show interest in student progress, or create an inclusive learning environment. Overall, punctuality did not\
+        translate into effective learning experiences')
+
 
        
 else:
