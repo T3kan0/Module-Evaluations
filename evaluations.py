@@ -643,9 +643,8 @@ if eval_files is not None:
         ]
 
         yes_count = tutorial_quality_outcome.count("Yes")
-        no_count = tutorial_quality_outcome.count("No")
+        #no_count = tutorial_quality_outcome.count("No")
 
-        print("Yes:", yes_count, "No:", no_count)
 
 ########## Tutor Types
 
@@ -1289,6 +1288,19 @@ if eval_files is not None:
         tutor_case1 = ('Tutorial quality was excellent. Tutors were punctual, supportive, inclusive, and committed to student success.\
         Students felt confident, well-assisted, and academically encouraged. This level of performance should be sustained and used as a\
         benchmark for best practice across the program.')
+
+
+        if yes_count == 0:
+            band = "Very Poor"
+        elif yes_count in [1, 2]:
+            band = "Poor"
+        elif yes_count in [3, 4]:
+            band = "Moderate"
+        elif yes_count in [5, 6]:
+            band = "Good"
+        elif yes_count == 7:
+            band = "Excellent"
+
 
                
 else:
