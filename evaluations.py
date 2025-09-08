@@ -628,7 +628,14 @@ if eval_files is not None:
             else:
                 return "No"
 
-
+        tutorial_quality_outcome = [
+            collapse_outcome(conduci1_counts),
+            collapse_outcome(spacious1_counts),
+            collapse_outcome(inter1_counts),
+            collapse_outcome(interct1_counts),
+            collapse_outcome(light1_counts),
+            collapse_outcome(conduci2_counts)
+        ]
 
 ########## Tutor Types
 
