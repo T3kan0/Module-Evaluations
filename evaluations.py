@@ -620,6 +620,9 @@ if eval_files is not None:
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('hlangu.png')
 
+        ## Function for collapsing the outcomes of Yes/No questions into either Yes or No.
+        # If the number of yes are more than no, then the outcome will yes, otherwise it will be No. 
+        
         def collapse_outcome(counts):
             yes_count = counts.get("Yes", 0)
             no_count = counts.get("No", 0)
@@ -628,6 +631,8 @@ if eval_files is not None:
             else:
                 return "No"
 
+        # This list will be used for determining the string to be used to choose the paragraph that describes the tutorial quality evaluations outcome.
+        
         tutorial_quality_outcome = [
             collapse_outcome(conduci1_counts),
             collapse_outcome(spacious1_counts),
