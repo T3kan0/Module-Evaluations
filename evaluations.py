@@ -1307,12 +1307,6 @@ if eval_files is not None:
             benchmark for best practice across the program."
         }
 
-        selected_paragraph = paragraphs[band]
-
-        print(selected_paragraph)
-
-
-
         if yes_count == 0:
             band = "Very Poor"
         elif yes_count in [1, 2]:
@@ -1324,7 +1318,9 @@ if eval_files is not None:
         elif yes_count == 7:
             band = "Excellent"
 
+        selected_paragraph = paragraphs[band]
 
+        print(selected_paragraph)
                
 else:
     st.write(' ')
