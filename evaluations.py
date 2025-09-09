@@ -1685,7 +1685,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         
         # Title
         pdf.cell(200, 10, "Tutorial Quality Distribution", ln=True, align="C")
-        pdf.ln(10)
+        pdf.ln(0.25)
 
         # Table headers
         pdf.set_font("Arial", "B", 12)
