@@ -1680,7 +1680,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.10. The following questions are on the perception of the tutor:', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-        pdf.set_font("Times", ' ', size = 13)
+        pdf.set_font('Arial','',10.0)
         pdf.multi_cell(0, 5, txt = str(tutorial_final_paragraph), align = 'L', fill = False)
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '3.1.10.1. My tutor was on time?', ln =14, align = 'L')                
