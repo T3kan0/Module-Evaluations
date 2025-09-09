@@ -1304,16 +1304,6 @@ if eval_files is not None:
 ### Automated Paragraphs: Narratives
 
         # Q 17
-        # Score = 0, 'Strongly Disagree'
-
-        # Score = 1 - 2, 'Disagree'
-
-        # Score 3 - 4, 'Neutral'
-
-        # Score = 5 - 6, 'Agree'
-
-        # Score = 7, 'Strongly Agree'
-
 
         tutorial_quality_paragraphs = {
             "Strongly Disagree": "Overall tutorial quality was very poor. Students strongly disagreed with the effectiveness of the tutorials, "
