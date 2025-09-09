@@ -1682,6 +1682,17 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','',10.0)
         pdf.multi_cell(0, 5, txt = str(tutorial_final_paragraph), align = 'L', fill = False)
+        
+        # Title
+        pdf.cell(200, 10, "Tutorial Quality Distribution", ln=True, align="C")
+        pdf.ln(10)
+
+        # Table headers
+        pdf.set_font("Arial", "B", 12)
+        pdf.cell(60, 10, "Response", border=1, align="C")
+        pdf.cell(40, 10, "Count (%)", border=1, align="C")
+        pdf.ln()
+
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '3.1.10.1. My tutor was on time?', ln =14, align = 'L')                
