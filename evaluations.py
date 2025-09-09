@@ -162,13 +162,18 @@ if eval_files is not None:
                 "Agree": 4,
                 "Strongly Agree": 5
             }
-    
-            total_votes = sum(counts.values())
+            
+            # Ensure all 5 labels are present
+            labels = list(likert_map.keys())
+            counts = counts.reindex(labels, fill_value=0)
+
+            
+            total_votes = counts.sum()
             if total_votes == 0:
                 return "Neutral"  # fallback if no responses
     
             # Weighted average
-            score_sum = sum(likert_map[resp] * count for resp, count in counts.items())
+            score_sum = sum(likert_map[label] * count for label, count in counts.items())
             avg_score = score_sum / total_votes
     
             # Convert back to label by rounding
