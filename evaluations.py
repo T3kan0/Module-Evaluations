@@ -1323,9 +1323,13 @@ if eval_files is not None:
                       "and maintaining this level of quality should be a priority."
         }
 
+        # Count frequency of each outcome
+        tutorial_outcome_counts = Counter(tutorial_quality_outcome)
+
+        # Convert to Series
+        distribution = pd.Series(tutorial_outcome_counts)
 
 
-               
 else:
     st.write(' ')
         
