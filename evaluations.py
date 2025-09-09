@@ -1693,7 +1693,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(40, 10, "Count (%)", border=1, align="C")
         pdf.ln()
 
-        pdf.set_font("Arial", size=12)
+        pdf.set_font("Arial", size=10)
         for response, percent in tutorial_qual_distribution.items():
             pdf.cell(60, 10, response, border=1)
             pdf.cell(40, 10, f"{percent}%", border=1, align="C")
@@ -1705,7 +1705,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.10.1. My tutor was on time?', ln =14, align = 'L')                
         pdf.ln(0.25)
         s22 = 'punc.png'
-        pdf.image(str(s22), x = 50, y = 50, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s22), x = 50, y = 120, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
@@ -1725,7 +1725,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.10.2. My tutor helped me with difficulties I encountered in the module?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s23 = 'diffc.png'
-        pdf.image(str(s23), x = 50, y = 130, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s23), x = 50, y = 200, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
@@ -1743,10 +1743,11 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')               
         pdf.set_font('Arial','B',10.0)
+        pdf.add_page()
         pdf.cell(0, 5, txt = '3.1.10.3. My tutor recognized that students are different?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s24 = 'diffr.png'
-        pdf.image(str(s24), x = 50, y = 210, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s24), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.add_page()
         pdf.set_font('Arial','B',10.0)
