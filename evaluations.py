@@ -1681,10 +1681,11 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.10. The following questions are on the perception of the tutor:', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.multi_cell(0, 5, txt = str(tutorial_final_paragraph), align = 'L', fill = False)
+        pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '3.1.10.1. My tutor was on time?', ln =14, align = 'L')                
         pdf.ln(0.25)
         s22 = 'punc.png'
-        pdf.image(str(s22), x = 50, y = 30, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s22), x = 50, y = 40, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
