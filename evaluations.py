@@ -1324,10 +1324,19 @@ if eval_files is not None:
         }
 
         # Count frequency of each outcome
-        tutorial_outcome_counts = Counter(tutorial_quality_outcome)
+        tutorial_qual_outcome_counts = Counter(tutorial_quality_outcome)
 
         # Convert to Series
-        distribution = pd.Series(tutorial_outcome_counts)
+        tutorial_qual_distribution = pd.Series(tutorial_qual_outcome_counts)
+
+        # Reindex to ensure all 5 Likert labels exist
+        labels = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+        tutorial_qual_distribution = tutorial_qual_distribution.reindex(labels, fill_value=0)
+
+        # Convert counts to percentages
+        tutorial_qual_distribution = tutorial_qual_distribution / tutorial_qual_distribution.sum() * 100
+        print(tutorial_qual_distribution)
+
 
 
 else:
