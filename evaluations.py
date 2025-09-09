@@ -1693,6 +1693,13 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(40, 10, "Count (%)", border=1, align="C")
         pdf.ln()
 
+        pdf.set_font("Arial", size=12)
+        for response, percent in tutorial_qual_distribution.items():
+            pdf.cell(60, 10, response, border=1)
+            pdf.cell(40, 10, f"{percent}%", border=1, align="C")
+            pdf.ln()
+
+        
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '3.1.10.1. My tutor was on time?', ln =14, align = 'L')                
