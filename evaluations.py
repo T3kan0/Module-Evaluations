@@ -1690,13 +1690,13 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         # Table headers
         pdf.set_font("Arial", "B", 12)
         pdf.cell(100, 10, "Response", border=1, align="C")
-        pdf.cell(80, 10, "Count (%)", border=1, align="C")
+        pdf.cell(90, 10, "Count (%)", border=1, align="C")
         pdf.ln()
 
         pdf.set_font("Arial", size=10)
         for response, percent in tutorial_qual_distribution.items():
             pdf.cell(100, 10, response, border=1, align="C")
-            pdf.cell(80, 10, f"{percent}%", border=1, align="C")
+            pdf.cell(90, 10, f"{percent}%", border=1, align="C")
             pdf.ln()
 
         
