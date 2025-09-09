@@ -1682,7 +1682,16 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','',10.0)
         pdf.multi_cell(0, 5, txt = str(tutorial_final_paragraph), align = 'L', fill = False)
-        
+        # Corresponding questions
+        questions = [
+            "Q1: My tutor was on time",
+            "Q2: My tutor helped me with difficulties that I encountered in the module",
+            "Q3: My tutor recognized that students are different",
+            "Q4: My tutor made an effort to help me",
+            "Q5: My tutor gave me confidence to complete my assessment",
+            "Q6: My tutor was interested in my academic progress",
+            "Q7: My tutor allowed me to use my home language to express myself"
+        ]
         # Title
         pdf.cell(200, 10, "Tutorial Quality Distribution", ln=True, align="C")
         pdf.ln(0.25)
