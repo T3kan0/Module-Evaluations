@@ -1337,6 +1337,13 @@ if eval_files is not None:
         tutorial_qual_distribution = tutorial_qual_distribution / tutorial_qual_distribution.sum() * 100
         print(tutorial_qual_distribution)
 
+        # Collapse the likert-scale distribution into a single variable
+        tutorial_qual_final_outcome = collapse_outcome(tutorial_qual_distribution)
+
+        # map the final outcome to the paragraph to be written in the report
+        tutorial_final_paragraph = tutorial_quality_paragraphs[tutorial_qual_final_outcome]
+
+
 
 
 else:
