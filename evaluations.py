@@ -1757,7 +1757,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         s24 = 'diffr.png'
         pdf.image(str(s24), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
-        pdf.add_page()
+        #pdf.add_page()
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.10.4. My tutor made an effort to help me', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C') 
@@ -1799,7 +1799,8 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-        #pdf.cell(0, 5, txt = '', ln =19, align = 'C')               
+        #pdf.cell(0, 5, txt = '', ln =19, align = 'C')
+        pdf.add_page()
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.10.6. My tutor was interested in my academic progress?', ln =14, align = 'L')        
         pdf.ln(0.25)
