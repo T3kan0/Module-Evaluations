@@ -1679,7 +1679,8 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.add_page()
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.10. The following questions are on the perception of the tutor:', ln =14, align = 'L')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C')        
+        pdf.cell(0, 5, txt = '', ln =19, align = 'C')
+        pdf.multi_cell(0, 5, txt = str(tutorial_final_paragraph), align = 'L', fill = False)
         pdf.cell(0, 5, txt = '3.1.10.1. My tutor was on time?', ln =14, align = 'L')                
         pdf.ln(0.25)
         s22 = 'punc.png'
@@ -1795,9 +1796,9 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.ln(0.25)
         s28 = 'hlangu.png'
         pdf.image(str(s28), x = 50, y = 240, w = 100, h = 70, type = 'PNG')
-        pdf.ln(0.25)
-        pdf.add_page()
-        pdf.multi_cell(0, 5, txt = str(tutorial_final_paragraph), align = 'L', fill = False)
+        #pdf.ln(0.25)
+        #pdf.add_page()
+        #pdf.multi_cell(0, 5, txt = str(tutorial_final_paragraph), align = 'L', fill = False)
         pdf.ln(0.25)
         pdf.add_page()
         pdf.set_font('Arial','B',10.0)
