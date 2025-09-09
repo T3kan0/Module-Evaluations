@@ -1694,7 +1694,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.ln()
 
         pdf.set_font("Arial", size=10)
-        for response, percent in tutorial_qual_distribution.items():
+        for response, percent in tutorial_quality_outcome.items():
             pdf.cell(100, 10, response, border=1, align="C")
             pdf.cell(90, 10, f"{percent}%", border=1, align="C")
             pdf.ln()
