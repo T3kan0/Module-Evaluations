@@ -1698,7 +1698,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         # Table headers
         pdf.set_font("Arial", "B", 12)
         pdf.cell(120, 10, "Questions", border=1, align="C")
-        pdf.cell(70, 10, "Outcomes", border=1, align="C")
+        pdf.cell(70, 10, "Weighted Outcomes", border=1, align="C")
         pdf.ln()
 
         pdf.set_font("Arial", size=10)
