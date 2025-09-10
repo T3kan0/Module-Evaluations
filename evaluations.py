@@ -677,6 +677,7 @@ if eval_files is not None:
             collapse_outcome(inter1_counts),
             collapse_outcome(interct1_counts),
             collapse_outcome(light1_counts),
+            collapse_outcome(vent1_counts),
             collapse_outcome(conduci2_counts)
         ]
 
