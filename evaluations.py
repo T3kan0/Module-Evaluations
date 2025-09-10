@@ -1690,7 +1690,8 @@ teaching, learning and more. Additionally, we studied responses to identify atte
             "Q3: My tutor recognized that students are different",
             "Q4: My tutor made an effort to help me",
             "Q5: My tutor gave me confidence to complete my assessment",
-            "Q6: My tutor was interested in my academic progress"
+            "Q6: My tutor was interested in my academic progress",
+            "Q7: My tutor allowed me to use my ome language to express myself"
         ]
         # Title
         pdf.cell(200, 10, "Tutorial Quality Distribution", ln=True, align="C")
