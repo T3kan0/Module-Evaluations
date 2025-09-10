@@ -1837,10 +1837,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.10.7. My tutor allowed me to use my home language to express myself?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s28 = 'hlangu.png'
-        pdf.image(str(s28), x = 50, y = 60, w = 100, h = 70, type = 'PNG')
-        #pdf.ln(0.25)
-        #pdf.add_page()
-        #pdf.multi_cell(0, 5, txt = str(tutorial_final_paragraph), align = 'L', fill = False)
+        pdf.image(str(s28), x = 50, y = 90, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.add_page()
         pdf.set_font('Arial','B',10.0)
