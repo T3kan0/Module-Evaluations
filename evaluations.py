@@ -1775,7 +1775,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.10.4. My tutor made an effort to help me', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C') 
         s25 = 'efft.png'
-        pdf.image(str(s25), x = 50, y = 100, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s25), x = 50, y = 90, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
@@ -1797,7 +1797,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.10.5. My tutor gave me confidence to complete my assessments?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s26 = 'conf.png'
-        pdf.image(str(s26), x = 50, y = 210, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s26), x = 50, y = 180, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
