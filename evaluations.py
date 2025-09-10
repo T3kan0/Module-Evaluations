@@ -1790,14 +1790,11 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-
-        #pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-        #pdf.cell(0, 5, txt = '', ln =19, align = 'C')               
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.10.5. My tutor gave me confidence to complete my assessments?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s26 = 'conf.png'
-        pdf.image(str(s26), x = 50, y = 180, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s26), x = 50, y = 170, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
