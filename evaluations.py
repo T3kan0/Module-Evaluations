@@ -1816,7 +1816,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.10.6. My tutor was interested in my academic progress?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s27 = 'intr.png'
-        pdf.image(str(s27), x = 50, y = 170, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s27), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
@@ -1837,7 +1837,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.10.7. My tutor allowed me to use my home language to express myself?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s28 = 'hlangu.png'
-        pdf.image(str(s28), x = 50, y = 240, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s28), x = 50, y = 60, w = 100, h = 70, type = 'PNG')
         #pdf.ln(0.25)
         #pdf.add_page()
         #pdf.multi_cell(0, 5, txt = str(tutorial_final_paragraph), align = 'L', fill = False)
