@@ -1617,6 +1617,19 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         ]
         # Title
         pdf.cell(200, 10, "Tutorial Quality Distribution", ln=True, align="C")
+        # Table headers
+        pdf.set_font("Arial", "B", 12)
+        pdf.cell(120, 10, "Questions", border=1, align="C")
+        pdf.cell(70, 10, "Weighted Outcomes", border=1, align="C")
+        pdf.ln()
+
+        pdf.set_font("Arial", size=10)
+        for q, outcome in zip(qual_questions, tutorial_organisation_outcome):
+            pdf.cell(120, 10, q, border=1, align="C")
+            pdf.cell(70, 10, outcome, border=1, align="C")
+            pdf.ln()
+
+        
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.9.1. Tutorial sessions helped me understand the concepts better?', ln =14, align = 'L')        
         pdf.ln(0.25)
