@@ -1745,7 +1745,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.9.7. The tutorial sessions helped me improve my communication skills?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s20 = 'comm.png'
-        pdf.image(str(s20), x = 50, y = 180, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s20), x = 50, y = 190, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         #pdf.add_page()
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
