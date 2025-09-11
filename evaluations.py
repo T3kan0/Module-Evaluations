@@ -1062,7 +1062,7 @@ if eval_files is not None:
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('navi1.png')
 
-        # Applying the collapse function on the tutorial vanue quality questions Q19.
+        # Applying the collapse function on the tutorial vanue quality questions Q21.
         tutorial_vanue_outcome2 = [
             collapse_outcome(vanue17_counts),
             collapse_outcome(vanue18_counts),
@@ -1382,6 +1382,7 @@ if eval_files is not None:
                       "and maintaining this level of quality should be a priority."
         }
 
+
         # Count frequency of each outcome
         tutorial_qual_outcome_counts = Counter(tutorial_quality_outcome)
 
@@ -1402,7 +1403,39 @@ if eval_files is not None:
         # map the final outcome to the paragraph to be written in the report
         tutorial_final_paragraph = tutorial_quality_paragraphs[tutorial_qual_final_outcome]
 
+        # Q 19
+        
+        venue_quality_paragraphs = {
+            "Strongly Disagree": "The quality of the tutorial venues was perceived as very poor. Students strongly disagreed that the spaces were conducive to learning, spacious, or comfortable for interaction. Concerns about lighting, ventilation, and overall suitability were widely reported, suggesting that current venues seriously hinder tutorial effectiveness. Immediate action is required to secure appropriate facilities.",
+    
+            "Disagree": "Venue quality was poor. Many students felt that the tutorial spaces did not adequately support learning, comfort, or interaction. Issues with space, lighting, or ventilation created challenges, although a few positive aspects may have been noted. Significant improvements to the physical learning environment are needed.",
+    
+            "Neutral": "Venue quality was moderate. Student feedback was mixed, with no clear consensus on whether the venues supported learning and interaction. Some students found the venues comfortable and conducive, while others identified issues with space, lighting, or ventilation. Greater consistency in venue standards is necessary.",
+    
+            "Agree": "Venue quality was good. Students generally agreed that the physical spaces were conducive to learning, spacious, and comfortable for interaction. Lighting and ventilation were mostly satisfactory, though there remain opportunities for further enhancement to ensure all tutorials benefit from equally supportive environments.",
+    
+            "Strongly Agree": "Venue quality was excellent. Students strongly agreed that the venues were conducive to learning, spacious, comfortable, and well equipped with proper lighting and ventilation. The physical environment greatly supported interaction and engagement, serving as a model for future tutorial planning."
+        }
 
+        # Count frequency of each outcome
+        tutorial_venue_outcome_counts = Counter(tutorial_vanue_outcome)
+
+        # Convert to Series
+        tutorial_venue_distribution = pd.Series(tutorial_venue_outcome_counts)
+
+        # Reindex to ensure all 5 Likert labels exist
+        labels = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+        tutorial_venue_distribution = tutorial_venue_distribution.reindex(labels, fill_value=0)
+
+        # Convert counts to percentages
+        tutorial_venue_distribution = tutorial_venue_distribution / tutorial_venue_distribution.sum() * 100
+        print(tutorial_venue_distribution)
+
+        # Collapse the likert-scale distribution into a single variable
+        tutorial_venue_final_outcome = collapse_outcome(tutorial_venue_distribution)
+
+        # map the final outcome to the paragraph to be written in the report
+        tutorial_venue_final_paragraph = venue_quality_paragraphs[tutorial_venue_final_outcome]
 
 
 else:
