@@ -670,7 +670,20 @@ if eval_files is not None:
 
 
         # This list will be used for determining the string to be used to choose the paragraph that describes the tutorial quality evaluations outcome.
+        # Applying the collapse function on the tutorial organisation questions Q16.
         
+        tutorial_organisation_outcome = [
+            collapse_outcome(conduci_counts),
+            collapse_outcome(spacious_counts),
+            collapse_outcome(inter_counts),
+            collapse_outcome(interct_counts),
+            collapse_outcome(light_counts),
+            collapse_outcome(vent_counts),
+            collapse_outcome(vent2_counts),
+            collapse_outcome(vent3_counts)
+        ]        
+        
+        # Applying the collapse function on the tutorial quality questions Q17.
         tutorial_quality_outcome = [
             collapse_outcome(conduci1_counts),
             collapse_outcome(spacious1_counts),
