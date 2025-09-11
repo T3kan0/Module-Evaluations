@@ -1062,7 +1062,13 @@ if eval_files is not None:
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('navi1.png')
 
-
+        # Applying the collapse function on the tutorial vanue quality questions Q19.
+        tutorial_vanue_outcome2 = [
+            collapse_outcome(vanue17_counts),
+            collapse_outcome(vanue18_counts),
+            collapse_outcome(vanue19_counts),
+            collapse_outcome(vanue20_counts)
+        ]
 
         
         # Filter columns that start with '14:'
