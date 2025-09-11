@@ -1634,7 +1634,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.9.1. Tutorial sessions helped me understand the concepts better?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s14 = 'concepts.png'
-        pdf.image(str(s14), x = 50, y = 115, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s14), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
@@ -1653,7 +1653,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.9.2. I found the tutorial sessions helpful to my learning?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s15 = 'tuthelp.png'
-        pdf.image(str(s15), x = 50, y = 185, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s15), x = 50, y = 40, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.add_page()
         pdf.set_font('Arial','B',10.0)
