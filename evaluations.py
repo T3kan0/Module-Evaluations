@@ -694,8 +694,6 @@ if eval_files is not None:
             collapse_outcome(conduci2_counts)
         ]
 
-
-
 ########## Tutor Types
 
         conduci3_counts = df['18: Blackboard collaborate'].value_counts()
@@ -839,6 +837,15 @@ if eval_files is not None:
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('vent.png')
 
+        # Applying the collapse function on the tutorial vanue quality questions Q19.
+        tutorial_vanue_outcome = [
+            collapse_outcome(vanue1_counts),
+            collapse_outcome(vanue2_counts),
+            collapse_outcome(vanue3_counts),
+            collapse_outcome(vanue4_counts),
+            collapse_outcome(vanue5_counts),
+            collapse_outcome(vanue6_counts)
+        ]
 ############ Hybrid Venue Tutorial sessions
 
         vanue7_counts = df['20.1: The following questions are on the perception of the tutorial hybrid (face-to-face & online sessions): The venue where the tutorials took place was conducive to learning'].value_counts()
@@ -1600,7 +1607,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.9. The following questions are on the perception of the tutorial sessions:', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.9. The following outcomes are on the perception of the tutorial sessions:', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','',10.0)
         pdf.multi_cell(0, 5, txt = str(tutorial_org_final_paragraph), align = 'L', fill = False) 
