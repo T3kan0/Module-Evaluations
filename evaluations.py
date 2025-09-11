@@ -1603,7 +1603,20 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.9. The following questions are on the perception of the tutorial sessions:', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','',10.0)
-        pdf.multi_cell(0, 5, txt = str(tutorial_org_final_paragraph), align = 'L', fill = False)     
+        pdf.multi_cell(0, 5, txt = str(tutorial_org_final_paragraph), align = 'L', fill = False) 
+        # Corresponding questions
+        qual_questions = [
+            "Q1: Tutorial sessions helped me understand the concepts better",
+            "Q2: I found the tutorial sessions helpful to my learning",
+            "Q3: The tutorial sessions helped me improve my academic performance",
+            "Q4: I found the tutorial sessions well-planned",
+            "Q5: I found the tutorial sessions well-structured",
+            "Q6: Tutorial sessions helped me feel prepared for assessments",
+            "Q7: The tutorial sessions helped me improve my communication skills",
+            "Q8: I would recommend tutorials to other students"
+        ]
+        # Title
+        pdf.cell(200, 10, "Tutorial Quality Distribution", ln=True, align="C")
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.9.1. Tutorial sessions helped me understand the concepts better?', ln =14, align = 'L')        
         pdf.ln(0.25)
