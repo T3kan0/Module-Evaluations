@@ -1724,7 +1724,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.9.6. Tutorial sessions helped me feel prepared for assessments?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s19 = 'prep.png'
-        pdf.image(str(s19), x = 50, y = 190, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s19), x = 50, y = 180, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.add_page()      
         pdf.set_font('Arial','B',10.0)
@@ -1752,7 +1752,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.9.8. I would recommend tutorials to other students?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s21 = 'recc.png'
-        pdf.image(str(s21), x = 50, y = 80, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s21), x = 50, y = 100, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)      
         pdf.add_page()
         pdf.set_font('Arial','B',10.0)
