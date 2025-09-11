@@ -1629,7 +1629,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
             pdf.cell(70, 10, outcome, border=1, align="C")
             pdf.ln()
 
-        
+        pdf.add_page()
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.9.1. Tutorial sessions helped me understand the concepts better?', ln =14, align = 'L')        
         pdf.ln(0.25)
