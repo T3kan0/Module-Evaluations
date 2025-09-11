@@ -2003,7 +2003,21 @@ teaching, learning and more. Additionally, we studied responses to identify atte
             "Q6: The venue had proper ventilation"
         ]
 
+        # Title
+        pdf.cell(200, 10, "Tutorial Venue Distribution (Face-to-Face)", ln=True, align="C")
+        pdf.ln(0.25)
 
+        # Table headers
+        pdf.set_font("Arial", "B", 12)
+        pdf.cell(120, 10, "Questions", border=1, align="C")
+        pdf.cell(70, 10, "Weighted Outcomes", border=1, align="C")
+        pdf.ln()
+
+        pdf.set_font("Arial", size=10)
+        for q, outcome in zip(venue_questions, tutorial_vanue_outcome):
+            pdf.cell(120, 10, q, border=1, align="C")
+            pdf.cell(70, 10, outcome, border=1, align="C")
+            pdf.ln()
 
         
         pdf.cell(0, 5, txt = '3.1.12.1. The venue where the tutorials took place was conducive to learning?', ln =14, align = 'L')
