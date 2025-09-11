@@ -1316,6 +1316,20 @@ if eval_files is not None:
         plt.savefig('word_count2.png')
 
 ### Automated Paragraphs: Narratives
+        # Q 16
+        tutorial_organisation_paragraphs = {
+                "Strongly Disagree": "Tutorial organisation was perceived as very poor. Students strongly disagreed that the sessions contributed to their understanding, performance, or preparation. This indicates serious concerns regarding planning, structure, and effectiveness of the tutorials. Immediate redesign and stronger academic alignment are required.",
+    
+                "Disagree": "Tutorial organisation was poor. Many students felt that the sessions did not adequately support their learning, academic performance, or assessment preparation. While some elements may have been partially effective, the overall perception was negative. Significant improvements in planning, structure, and delivery are needed.",
+    
+                "Neutral": "Tutorial organisation was moderate. Students expressed mixed opinions, with no strong consensus on whether the sessions improved understanding, performance, or preparedness. This suggests inconsistency across tutorials: while some sessions were well planned and supportive, others fell short. Greater standardisation and quality assurance are needed.",
+    
+                "Agree": "Tutorial organisation was good. Students generally agreed that the sessions improved their understanding of concepts, supported academic performance, and prepared them for assessments. Most sessions were well planned and structured, though there is still room for refinement to ensure consistency across all tutorials.",
+    
+                "Strongly Agree": "Tutorial organisation was excellent. Students strongly agreed that the sessions were helpful, well-planned, and well-structured. They reported improvements in academic performance, communication skills, and assessment preparedness. The tutorials were widely valued and are recommended as a best-practice model to sustain going forward."
+        }
+
+
 
         # Q 17
 
