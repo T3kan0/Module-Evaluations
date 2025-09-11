@@ -1704,10 +1704,10 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         s18 = 'structure.png'
         pdf.image(str(s18), x = 50, y = 100, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
-        #pdf.add_page()
+        pdf.add_page()
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-        pdf.cell(0, 5, txt = '3.1.9.5. Tutorial sessions helped me feel prepared for assessments?', ln =14, align = 'L')        
+        pdf.cell(0, 5, txt = '3.1.9.6. Tutorial sessions helped me feel prepared for assessments?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s19 = 'prep.png'
         pdf.image(str(s19), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
@@ -1727,12 +1727,12 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')       
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.9.6. The tutorial sessions helped me improve my communication skills?', ln =14, align = 'L')        
+        pdf.cell(0, 5, txt = '3.1.9.7. The tutorial sessions helped me improve my communication skills?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s20 = 'comm.png'
         pdf.image(str(s20), x = 50, y = 180, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
-        pdf.add_page()
+        #pdf.add_page()
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')   
@@ -1748,7 +1748,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')       
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.9.7. I would recommend tutorials to other students?', ln =14, align = 'L')        
+        pdf.cell(0, 5, txt = '3.1.9.8. I would recommend tutorials to other students?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s21 = 'recc.png'
         pdf.image(str(s21), x = 50, y = 180, w = 100, h = 70, type = 'PNG')
