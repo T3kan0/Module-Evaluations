@@ -1662,7 +1662,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
             "Q8: I would recommend tutorials to other students"
         ]
         # Title
-        pdf.cell(200, 10, "Tutorial Quality Distribution", ln=True, align="C")
+        pdf.cell(200, 10, "Tutorial Organisation Distribution", ln=True, align="C")
         # Table headers
         pdf.set_font("Arial", "B", 12)
         pdf.cell(120, 10, "Questions", border=1, align="C")
@@ -1992,7 +1992,8 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')               
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.12. The following questions are on the perception of the tutorial venue (Face-to-face sessions):', ln =14, align = 'L')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C') 
+        pdf.cell(0, 5, txt = '', ln =19, align = 'C')
+        pdf.set_font('Arial','',10.0)
         # Corresponding questions
         venue_questions = [
             "Q1: The venue where the tutorials took place was conducive to learning",
@@ -2019,7 +2020,8 @@ teaching, learning and more. Additionally, we studied responses to identify atte
             pdf.cell(70, 10, outcome, border=1, align="C")
             pdf.ln()
 
-        
+        pdf.add_page()
+        pdf.set_font('Arial','B',10.0)       
         pdf.cell(0, 5, txt = '3.1.12.1. The venue where the tutorials took place was conducive to learning?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')         
         pdf.ln(0.25)
