@@ -1672,7 +1672,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.9.3. The tutorial sessions help me improve my academic performance?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s16 = 'improve.png'
-        pdf.image(str(s16), x = 50, y = 150, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s16), x = 50, y = 160, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
@@ -1702,7 +1702,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.9.5. I found the tutorial sessions well structured?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s18 = 'structure.png'
-        pdf.image(str(s18), x = 50, y = 180, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s18), x = 50, y = 190, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.add_page()
         pdf.set_font('Arial','B',10.0)
