@@ -1328,8 +1328,26 @@ if eval_files is not None:
     
                 "Strongly Agree": "Tutorial organisation was excellent. Students strongly agreed that the sessions were helpful, well-planned, and well-structured. They reported improvements in academic performance, communication skills, and assessment preparedness. The tutorials were widely valued and are recommended as a best-practice model to sustain going forward."
         }
+        
+        # Count frequency of each outcome
+        tutorial_org_outcome_counts = Counter(tutorial_organisation_outcome)
 
+        # Convert to Series
+        tutorial_org_distribution = pd.Series(tutorial_org_outcome_counts)
 
+        # Reindex to ensure all 5 Likert labels exist
+        labels = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+        tutorial_org_distribution = tutorial_org_distribution.reindex(labels, fill_value=0)
+
+        # Convert counts to percentages
+        tutorial_org_distribution = tutorial_org_distribution / tutorial_org_distribution.sum() * 100
+        print(tutorial_org_distribution)
+
+        # Collapse the likert-scale distribution into a single variable
+        tutorial_org_final_outcome = collapse_outcome(tutorial_org_distribution)
+
+        # map the final outcome to the paragraph to be written in the report
+        tutorial_org_final_paragraph = tutorial_organisation_paragraphs[tutorial_org_final_outcome]
 
         # Q 17
 
