@@ -1994,6 +1994,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.12. The following questions are on the perception of the tutorial venue (Face-to-face sessions):', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','',10.0)
+        pdf.multi_cell(0, 5, txt = str(tutorial_venue_final_paragraph), align = 'L', fill = False)
         # Corresponding questions
         venue_questions = [
             "Q1: The venue where the tutorials took place was conducive to learning",
