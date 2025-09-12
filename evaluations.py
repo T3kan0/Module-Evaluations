@@ -2027,7 +2027,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')         
         pdf.ln(0.25)
         s30 = 'conducive.png'
-        pdf.image(str(s30), x = 50, y = 30, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s30), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
