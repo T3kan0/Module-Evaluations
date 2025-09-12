@@ -1991,7 +1991,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')               
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.12. The following questions are on the perception of the tutorial venue (Face-to-face sessions):', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.12. The following outcomes are on the perception of the tutorial venue (Face-to-face sessions):', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','',10.0)
         pdf.multi_cell(0, 5, txt = str(tutorial_venue_final_paragraph), align = 'L', fill = False)
@@ -2027,7 +2027,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')         
         pdf.ln(0.25)
         s30 = 'conducive.png'
-        pdf.image(str(s30), x = 50, y = 115, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s30), x = 50, y = 30, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
@@ -2048,7 +2048,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.12.2. The venue was spacious enough to accommodate the student(s)?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         s31 = 'spacious.png'
-        pdf.image(str(s31), x = 50, y = 190, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s31), x = 50, y = 90, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.add_page()               
         pdf.set_font('Arial','B',10.0)
