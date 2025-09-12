@@ -2113,15 +2113,14 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.12.6. The venue had proper ventilation?', ln =14, align = 'L')
         s35 = 'vent.png'
         pdf.image(str(s35), x = 50, y = 170, w = 100, h = 70, type = 'PNG')
-        pdf.ln(0.25) 
-        
+        pdf.ln(0.25)        
         pdf.add_page()
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.13. The following questions are on the perception of the tutorial hybrid (face-to-face & online sessions):', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '3.1.13.1. The venue where the tutorials took place was conducive to learning?', ln =14, align = 'L')
         s36 = 'conducive1.png'
-        pdf.image(str(s36), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s36), x = 50, y = 30, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
@@ -2142,7 +2141,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.13.2. The venue was spacious enough to accommodate the student(s)?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         s37 = 'spacious1.png'
-        pdf.image(str(s37), x = 50, y = 100, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s37), x = 50, y = 110, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.add_page()               
         pdf.set_font('Arial','B',10.0)
