@@ -2158,7 +2158,9 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.13.3. The venue made you comfortable to interact with your tutors?', ln =14, align = 'L')
-
+        s38 = 'inter1.png'
+        pdf.image(str(s38), x = 50, y = 170, w = 100, h = 70, type = 'PNG')
+        pdf.ln(0.25)
         
         pdf.add_page()               
         pdf.set_font('Arial','B',10.0)
