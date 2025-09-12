@@ -2252,35 +2252,13 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         s44 = 'navi.png'
         pdf.image(str(s44), x = 50, y = 170, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
-
-        
-        pdf.add_page()               
-        pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.13.9. The platform was easy to navigate?', ln =14, align = 'L')
-        s44 = 'navi.png'
-        pdf.image(str(s44), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
-        pdf.ln(0.25)
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C')   
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C')        
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C')   
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-        #pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-        #pdf.cell(0, 5, txt = '', ln =19, align = 'C')               
+        pdf.add_page()                            
         pdf.set_font('Arial','B',10.0)        
         pdf.cell(0, 5, txt = '3.1.14. The following questions are on the perception of the tutorial Platform (online sessions):', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '3.1.14.1. The platform where the tutorials took place was conducive to learning?', ln =14, align = 'L')
         s45 = 'conducive3.png'
-        pdf.image(str(s45), x = 50, y = 100, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s45), x = 50, y = 30, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
@@ -2301,8 +2279,11 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.14.2. The platform made you comfortable to interact with the tutor?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         s46 = 'inter3.png'
-        pdf.image(str(s46), x = 50, y = 180, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s46), x = 50, y = 100, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
+
+
+        
         pdf.add_page()               
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.14.3. The platform made you comfortable to interact with the classmates?', ln =14, align = 'L')
