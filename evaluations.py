@@ -2205,7 +2205,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.13.6. The venue had proper ventilation?', ln =14, align = 'L')
         s41 = 'vent1.png'
-        pdf.image(str(s41), x = 50, y = 20, w = 170, h = 70, type = 'PNG')
+        pdf.image(str(s41), x = 50, y = 170, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25) 
 
         
@@ -2236,6 +2236,24 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         s43 = 'inter2.png'
         pdf.image(str(s43), x = 50, y = 100, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
+        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
+        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
+        pdf.cell(0, 5, txt = '', ln =19, align = 'C')   
+        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
+        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
+        pdf.cell(0, 5, txt = '', ln =19, align = 'C')        
+        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
+        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
+        pdf.cell(0, 5, txt = '', ln =19, align = 'C')   
+        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
+        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
+        pdf.cell(0, 5, txt = '', ln =19, align = 'C')
+        pdf.cell(0, 5, txt = '', ln =19, align = 'C')
+        pdf.set_font('Arial','B',10.0)
+        pdf.cell(0, 5, txt = '3.1.13.9. The platform was easy to navigate?', ln =14, align = 'L')
+
+
+        
         pdf.add_page()               
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.13.9. The platform was easy to navigate?', ln =14, align = 'L')
