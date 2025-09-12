@@ -2204,7 +2204,9 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.13.6. The venue had proper ventilation?', ln =14, align = 'L')
-
+        s41 = 'vent1.png'
+        pdf.image(str(s41), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
+        pdf.ln(0.25) 
 
         
         pdf.add_page()               
