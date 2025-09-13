@@ -1069,7 +1069,7 @@ if eval_files is not None:
             collapse_outcome(vanue19_counts),
             collapse_outcome(vanue20_counts)
         ]
-
+        
         
         # Filter columns that start with '14:'
         factmode_df = df.filter(regex='^22:')
@@ -1353,8 +1353,8 @@ if eval_files is not None:
         tutorial_org_distribution = tutorial_org_distribution.reindex(labels, fill_value=0)
 
         # Convert counts to percentages
-        tutorial_org_distribution = tutorial_org_distribution / tutorial_org_distribution.sum() * 100
-        print(tutorial_org_distribution)
+        #tutorial_org_distribution = tutorial_org_distribution / tutorial_org_distribution.sum() * 100
+        #print(tutorial_org_distribution)
 
         # Collapse the likert-scale distribution into a single variable
         tutorial_org_final_outcome = collapse_outcome(tutorial_org_distribution)
@@ -1394,8 +1394,8 @@ if eval_files is not None:
         tutorial_qual_distribution = tutorial_qual_distribution.reindex(labels, fill_value=0)
 
         # Convert counts to percentages
-        tutorial_qual_distribution = tutorial_qual_distribution / tutorial_qual_distribution.sum() * 100
-        print(tutorial_qual_distribution)
+        #tutorial_qual_distribution = tutorial_qual_distribution / tutorial_qual_distribution.sum() * 100
+        #print(tutorial_qual_distribution)
 
         # Collapse the likert-scale distribution into a single variable
         tutorial_qual_final_outcome = collapse_outcome(tutorial_qual_distribution)
@@ -1428,14 +1428,47 @@ if eval_files is not None:
         tutorial_venue_distribution = tutorial_venue_distribution.reindex(labels, fill_value=0)
 
         # Convert counts to percentages
-        tutorial_venue_distribution = tutorial_venue_distribution / tutorial_venue_distribution.sum() * 100
-        print(tutorial_venue_distribution)
+        #tutorial_venue_distribution = tutorial_venue_distribution / tutorial_venue_distribution.sum() * 100
+        #print(tutorial_venue_distribution)
 
         # Collapse the likert-scale distribution into a single variable
         tutorial_venue_final_outcome = collapse_outcome(tutorial_venue_distribution)
 
         # map the final outcome to the paragraph to be written in the report
         tutorial_venue_final_paragraph = venue_quality_paragraphs[tutorial_venue_final_outcome]
+
+        # Q 21
+        
+        venue_quality_paragraphs2 = {
+            "Strongly Disagree": "The quality of the tutorial online space was perceived as very poor. Students strongly disagreed that the spaces were conducive to learning, spacious, or comfortable for interaction. Concerns about lighting, ventilation, and overall suitability were widely reported, suggesting that current venues seriously hinder tutorial effectiveness. Immediate action is required to secure appropriate facilities.",
+    
+            "Disagree": "The quality of the tutorial online space was poor. Many students felt that the tutorial spaces did not adequately support learning, comfort, or interaction. Issues with space, lighting, or ventilation created challenges, although a few positive aspects may have been noted. Significant improvements to the physical learning environment are needed.",
+    
+            "Neutral": "The quality of the tutorial online space was moderate. Student feedback was mixed, with no clear consensus on whether the venues supported learning and interaction. Some students found the venues comfortable and conducive, while others identified issues with space, lighting, or ventilation. Greater consistency in venue standards is necessary.",
+    
+            "Agree": "The quality of the tutorial online space was good. Students generally agreed that the physical spaces were conducive to learning, spacious, and comfortable for interaction. Lighting and ventilation were mostly satisfactory, though there remain opportunities for further enhancement to ensure all tutorials benefit from equally supportive environments.",
+    
+            "Strongly Agree": "The quality of the tutorial online space was excellent. Students strongly agreed that the venues were conducive to learning, spacious, comfortable, and well equipped with proper lighting and ventilation. The physical environment greatly supported interaction and engagement, serving as a model for future tutorial planning."
+        }
+
+        # Count frequency of each outcome
+        tutorial_venue_outcome_counts2 = Counter(tutorial_vanue_outcome2)
+
+        # Convert to Series
+        tutorial_venue_distribution2 = pd.Series(tutorial_venue_outcome_counts2)
+
+        # Reindex to ensure all 5 Likert labels exist
+        labels = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+        tutorial_venue_distribution2 = tutorial_venue_distribution2.reindex(labels, fill_value=0)
+
+        # Convert counts to percentages
+        #tutorial_venue_distribution2 = tutorial_venue_distribution2 / tutorial_venue_distribution2.sum() * 100
+        #print(tutorial_venue_distribution2)
+
+        # Collapse the likert-scale distribution into a single variable
+        tutorial_venue_final_outcome = collapse_outcome(tutorial_venue_distribution2)
+
+
 
 
 else:
@@ -2281,14 +2314,14 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         s46 = 'inter3.png'
         pdf.image(str(s46), x = 50, y = 100, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
-
-
-
-        
-        
         pdf.add_page()               
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.14.3. The platform made you comfortable to interact with the classmates?', ln =14, align = 'L')
+
+
+
+
+        
         s47 = 'interct3.png'
         pdf.image(str(s47), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
