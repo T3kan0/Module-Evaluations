@@ -2318,7 +2318,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.14.3. The platform made you comfortable to interact with the classmates?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','',10.0)
-        pdf.multi_cell(0, 5, txt = str(tutorial_venue_final_paragraph2), align = 'L', fill = False)
+        pdf.multi_cell(0, 5, txt = str(venue_quality_paragraphs2), align = 'L', fill = False)
         # Corresponding questions
         venue_questions2 = [
             "Q1: The platform where the tutorials took place was conductive to learning",
