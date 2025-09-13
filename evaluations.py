@@ -2289,6 +2289,16 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.set_font('Arial','B',10.0)        
         pdf.cell(0, 5, txt = '3.1.14. The following questions are on the perception of the tutorial Platform (online sessions):', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
+        pdf.set_font('Arial','',10.0)
+        pdf.multi_cell(0, 5, txt = str(tutorial_venue_final_paragraph2), align = 'L', fill = False)
+        # Corresponding questions
+        venue_questions2 = [
+            "Q1: The platform where the tutorials took place was conductive to learning",
+            "Q2: The platform made you comfortable to interact with the tutor",
+            "Q3: The platform made you comfortable to interact with the classmates",
+            "Q4: The platform was easy to navigate"
+        ]
+        
         pdf.cell(0, 5, txt = '3.1.14.1. The platform where the tutorials took place was conducive to learning?', ln =14, align = 'L')
         s45 = 'conducive3.png'
         pdf.image(str(s45), x = 50, y = 30, w = 100, h = 70, type = 'PNG')
@@ -2317,19 +2327,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.add_page()               
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.14.3. The platform made you comfortable to interact with the classmates?', ln =14, align = 'L')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-        pdf.set_font('Arial','',10.0)
-        pdf.multi_cell(0, 5, txt = str(tutorial_venue_final_paragraph2), align = 'L', fill = False)
-        # Corresponding questions
-        venue_questions2 = [
-            "Q1: The platform where the tutorials took place was conductive to learning",
-            "Q2: The platform made you comfortable to interact with the tutor",
-            "Q3: The platform made you comfortable to interact with the classmates",
-            "Q4: The platform was easy to navigate"
-        ]
-
-
-        
+        pdf.cell(0, 5, txt = '', ln =19, align = 'C')  
         s47 = 'interct3.png'
         pdf.image(str(s47), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
