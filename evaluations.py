@@ -202,6 +202,10 @@ if eval_files is not None:
         
         ax0.bar(gend_data['4.0: What is your gender?'], gend_data['2: Kindly enter your student number'], color=list(color_palette.values()), label='A_STEP Students', edgecolor='darkblue')
         ax0.bar_label(ax0.containers[0], fmt='%0.0f', label_type='edge', fontsize=10)
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
+            
         # Set labels and title
         ax0.set_xlabel('Gender')
         ax0.set_ylabel('A_STEP Students')
@@ -218,6 +222,9 @@ if eval_files is not None:
         ax2.tick_params('y', colors='firebrick')
         # Set y-axis limits for the second subplot
         ax2.set_ylim(0, 15)  # Adjust the multiplier as needed
+        # Remove plot borders (spines)
+        for spine in ax2.spines.values():
+            spine.set_visible(False)
 
 
         plt.title('Comparison of Students and Home Languages per Gender')
