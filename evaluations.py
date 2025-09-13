@@ -335,7 +335,11 @@ if eval_files is not None:
                 ha='center', 
                 va='bottom'
             )
+        # Remove plot borders (spines)
+        for spine in ax.spines.values():
+            spine.set_visible(False)
 
+        
         # Show plot
         plt.xticks(rotation=25)
         plt.legend()
