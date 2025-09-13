@@ -2291,6 +2291,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','',10.0)
         pdf.multi_cell(0, 5, txt = str(tutorial_venue_final_paragraph2), align = 'L', fill = False)
+        pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         # Corresponding questions
         venue_questions2 = [
             "Q1: The platform where the tutorials took place was conductive to learning",
@@ -2298,10 +2299,26 @@ teaching, learning and more. Additionally, we studied responses to identify atte
             "Q3: The platform made you comfortable to interact with the classmates",
             "Q4: The platform was easy to navigate"
         ]
+        # Title
+        pdf.cell(200, 10, "Tutorial Venue Distribution (Online)", ln=True, align="C")
+        pdf.ln(0.25)
+
+        # Table headers
+        pdf.set_font("Arial", "B", 12)
+        pdf.cell(120, 10, "Questions", border=1, align="C")
+        pdf.cell(70, 10, "Weighted Outcomes", border=1, align="C")
+        pdf.ln()
+
+        pdf.set_font("Arial", size=10)
+        for q, outcome in zip(venue_questions2, tutorial_vanue_outcome2):
+            pdf.cell(120, 10, q, border=1, align="C")
+            pdf.cell(70, 10, outcome, border=1, align="C")
+            pdf.ln()
         
+        pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.14.1. The platform where the tutorials took place was conducive to learning?', ln =14, align = 'L')
         s45 = 'conducive3.png'
-        pdf.image(str(s45), x = 50, y = 30, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s45), x = 50, y = 100, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
@@ -2322,7 +2339,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '3.1.14.2. The platform made you comfortable to interact with the tutor?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         s46 = 'inter3.png'
-        pdf.image(str(s46), x = 50, y = 100, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s46), x = 50, y = 170, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.add_page()               
         pdf.set_font('Arial','B',10.0)
