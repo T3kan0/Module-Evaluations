@@ -2319,7 +2319,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.14.1. The platform where the tutorials took place was conducive to learning?', ln =14, align = 'L')
         s45 = 'conducive3.png'
-        pdf.image(str(s45), x = 50, y = 130, w = 100, h = 70, type = 'PNG')
+        pdf.image(str(s45), x = 50, y = 120, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
