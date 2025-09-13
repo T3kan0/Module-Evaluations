@@ -1440,15 +1440,15 @@ if eval_files is not None:
         # Q 21
         
         venue_quality_paragraphs2 = {
-            "Strongly Disagree": "The quality of the tutorial online space was perceived as very poor. Students strongly disagreed that the spaces were conducive to learning, spacious, or comfortable for interaction. Concerns about lighting, ventilation, and overall suitability were widely reported, suggesting that current venues seriously hinder tutorial effectiveness. Immediate action is required to secure appropriate facilities.",
+            "Strongly Disagree": "The quality of the tutorial platform was perceived as very poor. Students strongly disagreed that the platform were conducive to learning, spacious, or comfortable for interaction. Concerns about lighting, navigation, and overall suitability were widely reported, suggesting that current online platforms seriously hinder tutorial effectiveness. Immediate action is required to secure appropriate platforms.",
     
-            "Disagree": "The quality of the tutorial online space was poor. Many students felt that the tutorial spaces did not adequately support learning, comfort, or interaction. Issues with space, lighting, or ventilation created challenges, although a few positive aspects may have been noted. Significant improvements to the physical learning environment are needed.",
+            "Disagree": "The quality of the tutorial platform was poor. Many students felt that the tutorial spaces did not adequately support learning, comfort, or interaction. Issues with network connections, lighting, or navigation created challenges, although a few positive aspects may have been noted. Significant improvements to the online learning environment are needed.",
     
-            "Neutral": "The quality of the tutorial online space was moderate. Student feedback was mixed, with no clear consensus on whether the venues supported learning and interaction. Some students found the venues comfortable and conducive, while others identified issues with space, lighting, or ventilation. Greater consistency in venue standards is necessary.",
+            "Neutral": "The quality of the tutorial platform was moderate. Student feedback was mixed, with no clear consensus on whether the venues supported learning and interaction. Some students found the online platforms comfortable and conducive, while others identified issues with network connectivity, lighting, or navigation. Greater consistency in online platform standards is necessary.",
     
-            "Agree": "The quality of the tutorial online space was good. Students generally agreed that the physical spaces were conducive to learning, spacious, and comfortable for interaction. Lighting and ventilation were mostly satisfactory, though there remain opportunities for further enhancement to ensure all tutorials benefit from equally supportive environments.",
+            "Agree": "The quality of the tutorial platform was good. Students generally agreed that the physical spaces were conducive to learning, spacious, and comfortable for interaction. Network connectivity and navigation were mostly satisfactory, though there remain opportunities for further enhancement to ensure all tutorials benefit from equally supportive environments.",
     
-            "Strongly Agree": "The quality of the tutorial online space was excellent. Students strongly agreed that the venues were conducive to learning, spacious, comfortable, and well equipped with proper lighting and ventilation. The physical environment greatly supported interaction and engagement, serving as a model for future tutorial planning."
+            "Strongly Agree": "The quality of the tutorial platform was excellent. Students strongly agreed that the venues were conducive to learning, good network connectivity, comfortable, and well equipped with proper lighting and navigation. The online learning environment greatly supported interaction and engagement, serving as a model for future tutorial planning."
         }
 
         # Count frequency of each outcome
@@ -1466,8 +1466,7 @@ if eval_files is not None:
         #print(tutorial_venue_distribution2)
 
         # Collapse the likert-scale distribution into a single variable
-        tutorial_venue_final_outcome = collapse_outcome(tutorial_venue_distribution2)
-
+        tutorial_venue_final_outcome2 = collapse_outcome(tutorial_venue_distribution2)
 
 
 
@@ -2317,8 +2316,16 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.add_page()               
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.14.3. The platform made you comfortable to interact with the classmates?', ln =14, align = 'L')
-
-
+        pdf.cell(0, 5, txt = '', ln =19, align = 'C')
+        pdf.set_font('Arial','',10.0)
+        pdf.multi_cell(0, 5, txt = str(tutorial_venue_final_paragraph2), align = 'L', fill = False)
+        # Corresponding questions
+        venue_questions2 = [
+            "Q1: The platform where the tutorials took place was conductive to learning",
+            "Q2: The platform made you comfortable to interact with the tutor",
+            "Q3: The platform made you comfortable to interact with the classmates",
+            "Q4: The platform was easy to navigate"
+        ]
 
 
         
