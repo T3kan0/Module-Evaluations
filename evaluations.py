@@ -452,6 +452,11 @@ if eval_files is not None:
         plt.title('Are you familiar with the concept of multilingualism?')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+        
+        # Remove plot borders (spines)
+        for spine in ax.spines.values():
+            spine.set_visible(False)
+            
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('mutiling.png')   
 
@@ -470,6 +475,10 @@ if eval_files is not None:
         plt.title('Tutorial sessions helped me understand the concepts better')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+        # Remove plot borders (spines)
+        for spine in ax.spines.values():
+            spine.set_visible(False)
+        
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('concepts.png')
 
@@ -485,6 +494,11 @@ if eval_files is not None:
         plt.title('I found the tutorial sessions helpful to my learning')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+        
+        # Remove plot borders (spines)
+        for spine in ax.spines.values():
+            spine.set_visible(False)
+            
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('tuthelp.png')
 
@@ -502,6 +516,11 @@ if eval_files is not None:
         plt.title('The tutorial sessions help me improve my academic performance')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+
+        # Remove plot borders (spines)
+        for spine in ax.spines.values():
+            spine.set_visible(False)
+            
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('improve.png')
 
@@ -517,6 +536,11 @@ if eval_files is not None:
         plt.title('I found the tutorial sessions well-planned')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+        
+        # Remove plot borders (spines)
+        for spine in ax.spines.values():
+            spine.set_visible(False)
+            
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('plan.png')
 
@@ -532,6 +556,9 @@ if eval_files is not None:
         plt.title('I found the tutorial sessions well structured')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+        # Remove plot borders (spines)
+        for spine in ax.spines.values():
+            spine.set_visible(False)
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('structure.png')
 
@@ -547,6 +574,9 @@ if eval_files is not None:
         plt.title('Tutorial sessions helped me feel prepared for assessments')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+        # Remove plot borders (spines)
+        for spine in ax.spines.values():
+            spine.set_visible(False)
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('prep.png')
 
@@ -563,6 +593,9 @@ if eval_files is not None:
         plt.title('The tutorial sessions helped me improve my communication skills')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+        # Remove plot borders (spines)
+        for spine in ax.spines.values():
+            spine.set_visible(False)
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('comm.png')
 
@@ -579,6 +612,9 @@ if eval_files is not None:
         plt.title('I would recommend tutorials to other students')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+        # Remove plot borders (spines)
+        for spine in ax.spines.values():
+            spine.set_visible(False)
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('recc.png')
 
