@@ -1322,7 +1322,7 @@ if eval_files is not None:
             plt.text(i, v + 0.1, str(v), ha='center', va='bottom')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
-
+        plt.set_visible(False)
         plt.savefig('factor.png')
 
         
