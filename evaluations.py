@@ -454,7 +454,7 @@ if eval_files is not None:
         plt.tight_layout()
         
         # Remove plot borders (spines)
-        for spine in ax.spines.values():
+        for spine in ax0.spines.values():
             spine.set_visible(False)
             
         plt.xticks(rotation=0)  # Rotate x-    
@@ -476,7 +476,7 @@ if eval_files is not None:
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
         # Remove plot borders (spines)
-        for spine in ax.spines.values():
+        for spine in ax0.spines.values():
             spine.set_visible(False)
         
         plt.xticks(rotation=0)  # Rotate x-    
@@ -496,7 +496,7 @@ if eval_files is not None:
         plt.tight_layout()
         
         # Remove plot borders (spines)
-        for spine in ax.spines.values():
+        for spine in ax0.spines.values():
             spine.set_visible(False)
             
         plt.xticks(rotation=0)  # Rotate x-    
@@ -518,7 +518,7 @@ if eval_files is not None:
         plt.tight_layout()
 
         # Remove plot borders (spines)
-        for spine in ax.spines.values():
+        for spine in ax0.spines.values():
             spine.set_visible(False)
             
         plt.xticks(rotation=0)  # Rotate x-    
@@ -538,7 +538,7 @@ if eval_files is not None:
         plt.tight_layout()
         
         # Remove plot borders (spines)
-        for spine in ax.spines.values():
+        for spine in ax0.spines.values():
             spine.set_visible(False)
             
         plt.xticks(rotation=0)  # Rotate x-    
@@ -557,7 +557,7 @@ if eval_files is not None:
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
         # Remove plot borders (spines)
-        for spine in ax.spines.values():
+        for spine in ax0.spines.values():
             spine.set_visible(False)
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('structure.png')
@@ -575,7 +575,7 @@ if eval_files is not None:
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
         # Remove plot borders (spines)
-        for spine in ax.spines.values():
+        for spine in ax0.spines.values():
             spine.set_visible(False)
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('prep.png')
@@ -594,7 +594,7 @@ if eval_files is not None:
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
         # Remove plot borders (spines)
-        for spine in ax.spines.values():
+        for spine in ax0.spines.values():
             spine.set_visible(False)
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('comm.png')
@@ -613,7 +613,7 @@ if eval_files is not None:
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
         # Remove plot borders (spines)
-        for spine in ax.spines.values():
+        for spine in ax0.spines.values():
             spine.set_visible(False)
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('recc.png')
