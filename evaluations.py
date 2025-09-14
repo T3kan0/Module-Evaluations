@@ -674,6 +674,11 @@ if eval_files is not None:
         plt.title('My tutor recognized that students are different')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+        
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
+            
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('diffr.png')
 
@@ -690,6 +695,11 @@ if eval_files is not None:
         plt.title('My tutor made an effort to help me')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
+            
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('efft.png')
 
@@ -705,6 +715,11 @@ if eval_files is not None:
         plt.title('My tutor gave me confidence to complete my assessments')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
+            
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('conf.png')
 
@@ -720,6 +735,12 @@ if eval_files is not None:
         plt.title('My tutor was interested in my academic progress')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
+
+        
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('intr.png')
 
@@ -736,6 +757,11 @@ if eval_files is not None:
         plt.title('My tutor allowed me to use my home language to express myself')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+        
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
+        
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('hlangu.png')
 
@@ -779,6 +805,11 @@ if eval_files is not None:
         plt.title('Blackboard collaborate')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+        
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
+        
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('mode.png')
 
@@ -795,6 +826,11 @@ if eval_files is not None:
         plt.title('Face-to-face')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
+        
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('mode2.png')
 
@@ -811,6 +847,11 @@ if eval_files is not None:
         plt.title('Both (face-to-face and blackboard collaborate)')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
+        
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('mode3.png')
 
