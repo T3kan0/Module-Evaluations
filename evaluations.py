@@ -1403,6 +1403,9 @@ if eval_files is not None:
             plt.ylabel('Frequency')
             plt.title('Top {} Words in Comments'.format(top_n))
             plt.tight_layout()
+            # Remove plot borders (spines)
+            for spine in ax0.spines.values():
+                spine.set_visible(False)
             plt.savefig('word_count1.png')
 
         else:
@@ -1470,6 +1473,9 @@ if eval_files is not None:
             plt.ylabel('Frequency')
             plt.title('Top {} Words in Comments'.format(top_n))
             plt.tight_layout()
+            # Remove plot borders (spines)
+            for spine in ax0.spines.values():
+                spine.set_visible(False)
             plt.savefig('word_count1.png')
 
 
@@ -1544,6 +1550,9 @@ if eval_files is not None:
         plt.ylabel('Frequency')
         plt.title('Top {} Words in Comments'.format(top_n))
         plt.tight_layout()
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
         plt.savefig('word_count2.png')
 
 ### Automated Paragraphs: Narratives
