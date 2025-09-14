@@ -1205,6 +1205,11 @@ if eval_files is not None:
         plt.title('The platform where the tutorials took place was conducive to learning')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
+
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('conducive3.png') 
         
@@ -1221,6 +1226,11 @@ if eval_files is not None:
         plt.title('The platform made you comfortable to interact with the tutor')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
+
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('inter3.png')
 
@@ -1237,6 +1247,11 @@ if eval_files is not None:
         plt.title('The platform made you comfortable to interact with the classmates?')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
+
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('interct3.png')
 
@@ -1252,6 +1267,11 @@ if eval_files is not None:
         plt.title('The platform was easy to navigate')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
+
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('navi1.png')
 
@@ -1302,6 +1322,7 @@ if eval_files is not None:
             plt.text(i, v + 0.1, str(v), ha='center', va='bottom')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+
         plt.savefig('factor.png')
 
         
