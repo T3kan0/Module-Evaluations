@@ -633,6 +633,11 @@ if eval_files is not None:
         plt.title('My tutor was on time')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+        
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
+        
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('punc.png')
 
@@ -649,6 +654,10 @@ if eval_files is not None:
         plt.title(' My tutor helped me with difficulties I encountered in the module')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.tight_layout()
+        # Remove plot borders (spines)
+        for spine in ax0.spines.values():
+            spine.set_visible(False)
+        
         plt.xticks(rotation=0)  # Rotate x-    
         plt.savefig('diffc.png')
 
