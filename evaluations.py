@@ -150,8 +150,12 @@ if eval_files is not None:
         def collapse_outcome(counts):
             """
             Collapse Likert responses into a single outcome.
-            counts: dict with keys like {"Strongly Disagree": x, "Disagree": y, "Neutral": z, "Agree": a, "Strongly Agree": b}
-            Returns one of: Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree
+            counts: dict or Series with keys like 
+                {"Strongly Disagree": x, "Disagree": y, "Neutral": z, "Agree": a, "Strongly Agree": b}
+    
+            Returns:
+                outcome (str): One of Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree
+                total_votes (int): Sum of all values in counts
             """
             # Likert scale mapping
             likert_map = {
