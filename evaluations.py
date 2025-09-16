@@ -168,12 +168,15 @@ if eval_files is not None:
             
             # Ensure all 5 labels are present
             labels = list(likert_map.keys())
-            counts = counts.reindex(labels, fill_value=0)
+            if hasattr(counts, "reindex"):  # if it's a pandas Series
+                counts = counts.reindex(labels, fill_value=0)
+            else:  # plain dict
+                counts = {label: counts.get(label, 0) for label in labels}
 
             
-            total_votes = counts.sum()
+            total_votes = sum(counts.values())
             if total_votes == 0:
-                return "Neutral"  # fallback if no responses
+                return "Neutral", 0  # fallback if no responses
     
             # Weighted average
             score_sum = sum(likert_map[label] * count for label, count in counts.items())
@@ -181,17 +184,17 @@ if eval_files is not None:
     
             # Convert back to label by rounding
             if avg_score < 1.5:
-                return "Strongly Disagree"
+                outcome = "Strongly Disagree"
             elif avg_score < 2.5:
-                return "Disagree"
+                outcome = "Disagree"
             elif avg_score < 3.5:
-                return "Neutral"
+                outcome = "Neutral"
             elif avg_score < 4.5:
-                return "Agree"
+                outcome = "Agree"
             else:
-                return "Strongly Agree"
+                outcome = "Strongly Agree"
 
-        
+            return outcome, total_votes
         ### Categoric labels to characterize data outcomes
 
         positive_scale = ["Agree", "Strongly Agree"]
