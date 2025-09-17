@@ -1933,9 +1933,11 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.ln()
 
         pdf.set_font("Arial", size=10)
-        for q, outcome in zip(qual_questions, tutorial_organisation_outcome):
-            pdf.cell(120, 10, q, border=1, align="C")
-            pdf.cell(70, 10, outcome, border=1, align="C")
+        for q, outcome_tuple in zip(qual_questions, tutorial_organisation_outcome):
+            outcome_label, total_votes = outcome_tuple  # unpack tuple
+            pdf.cell(80, 10, q, border=1, align="C")
+            pdf.cell(50, 10, str(outcome_label), border=1, align="C")
+            pdf.cell(40, 10, str(total_votes), border=1, align="C")
             pdf.ln()
 
         pdf.add_page()
