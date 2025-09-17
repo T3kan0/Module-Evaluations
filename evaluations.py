@@ -195,6 +195,49 @@ if eval_files is not None:
                 outcome = "Strongly Agree"
 
             return outcome, total_votes
+
+
+
+         def aggregate_outcomes(outcomes):
+            """
+            Aggregate a list of outcomes into a likert-counts dict.
+
+            Input:
+                outcomes: list of either
+                    - tuples (label, votes) as returned by collapse_outcome, e.g. ("Agree", 115)
+                    - or plain label strings, e.g. "Agree" (treated as 1 vote)
+            Returns:
+                counts_dict: dict with keys for the five Likert labels and integer counts
+                total_votes: int (sum of all votes)
+            Example return: ({"Strongly Disagree":0, "Disagree":3, "Neutral":0, "Agree":235, "Strongly Agree":10}, 248)
+            """
+            labels = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+            counts = {label: 0 for label in labels}
+            total_votes = 0
+       
+           for item in outcomes:
+                if isinstance(item, tuple):
+                    label, votes = item
+                    votes = int(votes or 0)
+                    if label in counts:
+                        counts[label] += votes
+                    else:
+                        # unexpected label -> put under Neutral (or handle as you prefer)
+                        counts["Neutral"] += votes
+                    total_votes += votes
+                else:
+                    # plain label string -> count as 1 vote
+                    label = str(item)
+                    if label in counts:
+                        counts[label] += 1
+                    else:
+                        counts["Neutral"] += 1
+                    total_votes += 1
+
+            return counts, total_votes 
+        
+           
+        
         ### Categoric labels to characterize data outcomes
 
         positive_scale = ["Agree", "Strongly Agree"]
@@ -1575,22 +1618,11 @@ if eval_files is not None:
                 "Strongly Agree": "Tutorial organisation was excellent. Students strongly agreed that the sessions were helpful, well-planned, and well-structured. They reported improvements in academic performance, communication skills, and assessment preparedness. The tutorials were widely valued and are recommended as a best-practice model to sustain going forward."
         }
         
-        # Count frequency of each outcome
-        tutorial_org_outcome_counts = Counter(tutorial_organisation_outcome)
-
-        # Convert to Series
-        tutorial_org_distribution = pd.Series(tutorial_org_outcome_counts)
-
-        # Reindex to ensure all 5 Likert labels exist
-        labels = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
-        tutorial_org_distribution = tutorial_org_distribution.reindex(labels, fill_value=0)
-
-        # Convert counts to percentages
-        #tutorial_org_distribution = tutorial_org_distribution / tutorial_org_distribution.sum() * 100
-        #print(tutorial_org_distribution)
-
-        # Collapse the likert-scale distribution into a single variable
-        tutorial_org_final_outcome = collapse_outcome(tutorial_org_distribution)
+        # Aggregate these tuples into a likert-counts dict
+        tutorial_org_dict, tutorial_org_total_votes = aggregate_outcomes(tutorial_organisation_outcome)
+        
+        # Now collapse one more time to get the overall label and total votes
+        tutorial_org_final_outcome, final_votes = collapse_outcome(tutorial_org_dict)
 
         # map the final outcome to the paragraph to be written in the report
         tutorial_org_final_paragraph = tutorial_organisation_paragraphs[tutorial_org_final_outcome]
@@ -1615,23 +1647,11 @@ if eval_files is not None:
                       "and maintaining this level of quality should be a priority."
         }
 
-
-        # Count frequency of each outcome
-        tutorial_qual_outcome_counts = Counter(tutorial_quality_outcome)
-
-        # Convert to Series
-        tutorial_qual_distribution = pd.Series(tutorial_qual_outcome_counts)
-
-        # Reindex to ensure all 5 Likert labels exist
-        labels = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
-        tutorial_qual_distribution = tutorial_qual_distribution.reindex(labels, fill_value=0)
-
-        # Convert counts to percentages
-        #tutorial_qual_distribution = tutorial_qual_distribution / tutorial_qual_distribution.sum() * 100
-        #print(tutorial_qual_distribution)
-
-        # Collapse the likert-scale distribution into a single variable
-        tutorial_qual_final_outcome = collapse_outcome(tutorial_qual_distribution)
+        # Aggregate these tuples into a likert-counts dict
+        tutorial_qual_dict, tutorial_qual_total_votes = aggregate_outcomes(tutorial_quality_outcome)
+        
+        # Now collapse one more time to get the overall label and total votes
+        tutorial_qual_final_outcome, tutorial_qual_final_votes = collapse_outcome(tutorial_qual_dict)
 
         # map the final outcome to the paragraph to be written in the report
         tutorial_final_paragraph = tutorial_quality_paragraphs[tutorial_qual_final_outcome]
@@ -1650,22 +1670,11 @@ if eval_files is not None:
             "Strongly Agree": "Venue quality was excellent. Students strongly agreed that the venues were conducive to learning, spacious, comfortable, and well equipped with proper lighting and ventilation. The physical environment greatly supported interaction and engagement, serving as a model for future tutorial planning."
         }
 
-        # Count frequency of each outcome
-        tutorial_venue_outcome_counts = Counter(tutorial_vanue_outcome)
-
-        # Convert to Series
-        tutorial_venue_distribution = pd.Series(tutorial_venue_outcome_counts)
-
-        # Reindex to ensure all 5 Likert labels exist
-        labels = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
-        tutorial_venue_distribution = tutorial_venue_distribution.reindex(labels, fill_value=0)
-
-        # Convert counts to percentages
-        #tutorial_venue_distribution = tutorial_venue_distribution / tutorial_venue_distribution.sum() * 100
-        #print(tutorial_venue_distribution)
-
-        # Collapse the likert-scale distribution into a single variable
-        tutorial_venue_final_outcome = collapse_outcome(tutorial_venue_distribution)
+        # Aggregate these tuples into a likert-counts dict
+        venue_qual_dict, venue_qual_total_votes = aggregate_outcomes(tutorial_vanue_outcome)
+        
+        # Now collapse one more time to get the overall label and total votes
+        tutorial_venue_final_outcome, venue_qual_final_votes = collapse_outcome(venue_qual_dict)
 
         # map the final outcome to the paragraph to be written in the report
         tutorial_venue_final_paragraph = venue_quality_paragraphs[tutorial_venue_final_outcome]
@@ -1684,22 +1693,11 @@ if eval_files is not None:
             "Strongly Agree": "The quality of the tutorial platform was excellent. Students strongly agreed that the venues were conducive to learning, good network connectivity, comfortable, and well equipped with proper lighting and navigation. The online learning environment greatly supported interaction and engagement, serving as a model for future tutorial planning."
         }
 
-        # Count frequency of each outcome
-        tutorial_venue_outcome_counts2 = Counter(tutorial_vanue_outcome2)
-
-        # Convert to Series
-        tutorial_venue_distribution2 = pd.Series(tutorial_venue_outcome_counts2)
-
-        # Reindex to ensure all 5 Likert labels exist
-        labels = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
-        tutorial_venue_distribution2 = tutorial_venue_distribution2.reindex(labels, fill_value=0)
-
-        # Convert counts to percentages
-        #tutorial_venue_distribution2 = tutorial_venue_distribution2 / tutorial_venue_distribution2.sum() * 100
-        #print(tutorial_venue_distribution2)
-
-        # Collapse the likert-scale distribution into a single variable
-        tutorial_venue_final_outcome2 = collapse_outcome(tutorial_venue_distribution2)
+        # Aggregate these tuples into a likert-counts dict
+        venue_qual_dict2, venue_qual_total_votes = aggregate_outcomes(tutorial_vanue_outcome2)
+        
+        # Now collapse one more time to get the overall label and total votes
+        tutorial_venue_final_outcome2, venue_qual_final_votes2 = collapse_outcome(venue_qual_dict2)
 
         # map the final outcome to the paragraph to be written in the report
         tutorial_venue_final_paragraph2 = venue_quality_paragraphs2[tutorial_venue_final_outcome2]
