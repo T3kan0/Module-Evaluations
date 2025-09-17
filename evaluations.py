@@ -180,8 +180,8 @@ if eval_files is not None:
                 return "Neutral", 0  # fallback if no responses
     
             # Weighted average
-            score_sum = sum(likert_map[label] * count for label, count in counts.items())
-            avg_score = score_sum / total_votes
+            weighted_sum = builtins.sum(likert_map[label] * count for label, count in counts.items())
+            avg_score = weighted_sum / total_votes
     
             # Convert back to label by rounding
             if avg_score < 1.5:
