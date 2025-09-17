@@ -148,7 +148,7 @@ if eval_files is not None:
         'Gray': '#95A5A6',
         'Black': '#2C3E50'}
 
-         def collapse_outcome(counts):
+        def collapse_outcome(counts):
             """
             Collapse Likert responses into a single outcome.
             counts: dict or Series with keys like 
