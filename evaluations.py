@@ -175,7 +175,7 @@ if eval_files is not None:
                 counts = {label: counts.get(label, 0) for label in labels}
 
             
-            total_votes = sum(counts.values())
+            total_votes = builtins.sum(counts.values())
             if total_votes == 0:
                 return "Neutral", 0  # fallback if no responses
     
