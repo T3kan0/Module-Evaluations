@@ -1928,16 +1928,16 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(200, 10, "Tutorial Organisation Distribution", ln=True, align="C")
         # Table headers
         pdf.set_font("Arial", "B", 12)
-        pdf.cell(100, 10, "Questions", border=1, align="C")
-        pdf.cell(60, 10, "Weighted Outcome", border=1, align="C")
+        pdf.cell(110, 10, "Questions", border=1, align="C")
+        pdf.cell(50, 10, "Weighted Outcome", border=1, align="C")
         pdf.cell(20, 10, "Total Votes", border=1, align="C")
         pdf.ln()
 
         pdf.set_font("Arial", size=10)
         for q, outcome_tuple in zip(qual_questions, tutorial_organisation_outcome):
             outcome_label, total_votes = outcome_tuple  # unpack tuple
-            pdf.cell(100, 10, q, border=1, align="C")
-            pdf.cell(60, 10, str(outcome_label), border=1, align="C")
+            pdf.cell(110, 10, q, border=1, align="C")
+            pdf.cell(50, 10, str(outcome_label), border=1, align="C")
             pdf.cell(20, 10, str(total_votes), border=1, align="C")
             pdf.ln()
 
