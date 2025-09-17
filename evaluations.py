@@ -1928,8 +1928,9 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(200, 10, "Tutorial Organisation Distribution", ln=True, align="C")
         # Table headers
         pdf.set_font("Arial", "B", 12)
-        pdf.cell(120, 10, "Questions", border=1, align="C")
-        pdf.cell(70, 10, "Weighted Outcomes", border=1, align="C")
+        pdf.cell(80, 10, "Questions", border=1, align="C")
+        pdf.cell(50, 10, "Weighted Outcome", border=1, align="C")
+        pdf.cell(40, 10, "Total Votes", border=1, align="C")
         pdf.ln()
 
         pdf.set_font("Arial", size=10)
@@ -2087,16 +2088,18 @@ teaching, learning and more. Additionally, we studied responses to identify atte
 
         # Table headers
         pdf.set_font("Arial", "B", 12)
-        pdf.cell(120, 10, "Questions", border=1, align="C")
-        pdf.cell(70, 10, "Weighted Outcomes", border=1, align="C")
+        pdf.cell(80, 10, "Questions", border=1, align="C")
+        pdf.cell(50, 10, "Weighted Outcome", border=1, align="C")
+        pdf.cell(40, 10, "Total Votes", border=1, align="C")
         pdf.ln()
 
         pdf.set_font("Arial", size=10)
         for q, outcome in zip(questions, tutorial_quality_outcome):
-            pdf.cell(120, 10, q, border=1, align="C")
-            pdf.cell(70, 10, outcome, border=1, align="C")
+            outcome_label, total_votes = outcome  # unpack tuple
+            pdf.cell(80, 10, q, border=1, align="C")
+            pdf.cell(50, 10, str(outcome_label), border=1, align="C")
+            pdf.cell(40, 10, str(total_votes), border=1, align="C")
             pdf.ln()
-
         
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
@@ -2276,14 +2279,17 @@ teaching, learning and more. Additionally, we studied responses to identify atte
 
         # Table headers
         pdf.set_font("Arial", "B", 12)
-        pdf.cell(120, 10, "Questions", border=1, align="C")
-        pdf.cell(70, 10, "Weighted Outcomes", border=1, align="C")
+        pdf.cell(80, 10, "Questions", border=1, align="C")
+        pdf.cell(50, 10, "Weighted Outcome", border=1, align="C")
+        pdf.cell(40, 10, "Total Votes", border=1, align="C")
         pdf.ln()
 
         pdf.set_font("Arial", size=10)
         for q, outcome in zip(venue_questions, tutorial_vanue_outcome):
-            pdf.cell(120, 10, q, border=1, align="C")
-            pdf.cell(70, 10, outcome, border=1, align="C")
+            outcome_label, total_votes = outcome  # unpack tuple
+            pdf.cell(80, 10, q, border=1, align="C")
+            pdf.cell(50, 10, str(outcome_label), border=1, align="C")
+            pdf.cell(40, 10, str(total_votes), border=1, align="C")
             pdf.ln()
 
         pdf.add_page()
@@ -2537,14 +2543,17 @@ teaching, learning and more. Additionally, we studied responses to identify atte
 
         # Table headers
         pdf.set_font("Arial", "B", 12)
-        pdf.cell(120, 10, "Questions", border=1, align="C")
-        pdf.cell(70, 10, "Weighted Outcomes", border=1, align="C")
-        pdf.ln()
+        pdf.cell(80, 10, "Questions", border=1, align="C")
+        pdf.cell(50, 10, "Weighted Outcome", border=1, align="C")
+        pdf.cell(40, 10, "Total Votes", border=1, align="C")
+        pdf.ln()    
 
         pdf.set_font("Arial", size=10)
         for q, outcome in zip(venue_questions2, tutorial_vanue_outcome2):
-            pdf.cell(120, 10, q, border=1, align="C")
-            pdf.cell(70, 10, outcome, border=1, align="C")
+            outcome_label, total_votes = outcome  # unpack tuple
+            pdf.cell(80, 10, q, border=1, align="C")
+            pdf.cell(50, 10, str(outcome_label), border=1, align="C")
+            pdf.cell(40, 10, str(total_votes), border=1, align="C")
             pdf.ln()
         
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')       
