@@ -148,7 +148,7 @@ if eval_files is not None:
         'Gray': '#95A5A6',
         'Black': '#2C3E50'}
 
-        def collapse_outcome(counts):
+         def collapse_outcome(counts):
             """
             Collapse Likert responses into a single outcome.
             counts: dict or Series with keys like 
@@ -170,32 +170,30 @@ if eval_files is not None:
             # Ensure all 5 labels are present
             labels = list(likert_map.keys())
             if hasattr(counts, "reindex"):  # if it's a pandas Series
-                counts = counts.reindex(labels, fill_value=0)
+                counts = counts.reindex(labels, fill_value=0).to_dict()
             else:  # plain dict
-                counts = {label: counts.get(label, 0) for label in labels}
+                counts = {label: int(counts.get(label, 0)) for label in labels}
 
             
-            total_votes = builtins.sum(counts.values())
+            total_votes = int(builtins.sum(counts.values()))
             if total_votes == 0:
                 return "Neutral", 0  # fallback if no responses
     
             # Weighted average
-            weighted_sum = builtins.sum(likert_map[label] * count for label, count in counts.items())
+            weighted_sum = builtins.sum(likert_map[label] * cnt for label, cnt in counts.items())
             avg_score = weighted_sum / total_votes
     
-            # Convert back to label by rounding
+            # Convert back to label
             if avg_score < 1.5:
-                outcome = "Strongly Disagree"
+                return "Strongly Disagree", total_votes
             elif avg_score < 2.5:
-                outcome = "Disagree"
+                return "Disagree", total_votes
             elif avg_score < 3.5:
-                outcome = "Neutral"
+                return "Neutral", total_votes
             elif avg_score < 4.5:
-                outcome = "Agree"
+                return "Agree", total_votes
             else:
-                outcome = "Strongly Agree"
-
-            return outcome, total_votes
+                return "Strongly Agree", total_votes
 
 
 
