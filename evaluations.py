@@ -198,7 +198,7 @@ if eval_files is not None:
 
 
 
-         def aggregate_outcomes(outcomes):
+        def aggregate_outcomes(outcomes):
             """
             Aggregate a list of outcomes into a likert-counts dict.
 
