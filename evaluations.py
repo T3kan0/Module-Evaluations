@@ -215,7 +215,7 @@ if eval_files is not None:
             counts = {label: 0 for label in labels}
             total_votes = 0
        
-           for item in outcomes:
+            for item in outcomes:
                 if isinstance(item, tuple):
                     label, votes = item
                     votes = int(votes or 0)
