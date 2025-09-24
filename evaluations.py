@@ -1725,7 +1725,7 @@ if f_name:
         pdf.cell(0, 5, txt = '', ln =6)
         pdf.cell(0, 5, txt = '', ln =7)
         pdf.cell(0, 5, txt = '', ln =7)
-        pdf.cell(0, 5, txt = 'Evaluation Report: 2241', align = 'C', ln=8)
+        pdf.cell(0, 5, txt = 'Evaluation Report: 2252', align = 'C', ln=8)
         pdf.cell(0, 5, txt = '', ln =9)
         pdf.cell(0, 5, txt = 'A_STEP: A.T&T.E.', align = 'C', ln=10)
         pdf.cell(0, 5, txt = '', ln =11)
@@ -2239,9 +2239,9 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         s29 = 'mode.png'
         s291 = 'mode2.png'
         s292 = 'mode3.png'        
-        pdf.image(str(s29), x = 20, y = 20, w = 60, h = 60, type = 'PNG')
-        pdf.image(str(s291), x = 80, y = 20, w = 60, h = 60, type = 'PNG')
-        pdf.image(str(s292), x = 140, y = 20, w = 60, h = 60, type = 'PNG')        
+        #pdf.image(str(s29), x = 20, y = 20, w = 60, h = 60, type = 'PNG')
+        #pdf.image(str(s291), x = 80, y = 20, w = 60, h = 60, type = 'PNG')
+        #pdf.image(str(s292), x = 140, y = 20, w = 60, h = 60, type = 'PNG')        
         pdf.ln(0.25)        
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
         pdf.cell(0, 5, txt = '', ln =20, align = 'C')
