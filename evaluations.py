@@ -239,16 +239,16 @@ if eval_files is not None:
             return counts, total_votes 
         
            
+        
         def clean_text(text):
-            # Handle None / NaN
+            # Catch anything that's not a string
             if pd.isna(text):
                 return ""
-    
-            # Convert everything else to string
-            text = str(text).lower()
-    
-            # Keep only letters + spaces
-            text = re.sub(r"[^a-z\s]", "", text)
+            if not isinstance(text, str):
+                text = str(text)
+        
+            text = text.lower()
+            text = re.sub(r"[^a-z\s]", "", text)  # keep letters and spaces
             return text.strip()
 
 
