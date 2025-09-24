@@ -241,13 +241,8 @@ if eval_files is not None:
            
         
         def clean_text(text):
-            # Catch anything that's not a string
-            if pd.isna(text):
-                return ""
-            if not isinstance(text, str):
-                text = str(text)
-        
-            text = text.lower()
+            # force everything into a string
+            text = str(text).lower()
             text = re.sub(r"[^a-z\s]", "", text)  # keep letters and spaces
             return text.strip()
 
