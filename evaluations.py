@@ -24,6 +24,9 @@ from nltk.corpus import stopwords
 import os
 import string
 import builtins
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.decomposition import NMF
+
 
 st.set_page_config(
     page_title="Evaluations",
