@@ -239,7 +239,13 @@ if eval_files is not None:
             return counts, total_votes 
         
            
-        
+        # --- 1. Text Cleaning ---
+        def clean_text(text):
+            text = text.lower()
+            text = re.sub(r"[^a-z\s]", "", text)  # remove punctuation/numbers
+            return text
+
+
         ### Categoric labels to characterize data outcomes
 
         positive_scale = ["Agree", "Strongly Agree"]
