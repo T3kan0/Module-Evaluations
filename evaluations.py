@@ -1620,7 +1620,7 @@ if eval_files is not None:
         plt.savefig('word_count2.png')
 
 
-        df4["themes"] = df4["24: How do you think A_STEP tutorials can be improved?"].apply(clean_text)
+        df6["themes"] = df["24: How do you think A_STEP tutorials can be improved?"].apply(clean_text)
         # --- 2. Vectorization ---
         vectorizer = CountVectorizer(stop_words="english")
         X = vectorizer.fit_transform(df4["themes"])
