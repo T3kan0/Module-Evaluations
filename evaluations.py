@@ -2238,8 +2238,33 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','',10.0)
         pdf.multi_cell(0, 5, txt = str(tutorial_venue_final_paragraph), align = 'L', fill = False)
+        venue_questions = [
+            "Q1: The venue where the tutorials took place was conducive to learning",
+            "Q2: The venue was spacious enough to accommodate the student(s)",
+            "Q3: The venue made you comfortable to interact with the tutor",
+            "Q4: The venue made you comfortable to interact with your classmates",
+            "Q5: The venue had proper lighting",
+            "Q6: The venue had proper ventilation"
+        ]
 
+        # Title
+        pdf.cell(200, 10, "Tutorial Venue Distribution (Face-to-Face)", ln=True, align="C")
+        pdf.ln(0.25)
 
+        # Table headers
+        pdf.set_font("Arial", "B", 12)
+        pdf.cell(120, 10, "Questions", border=1, align="C")
+        pdf.cell(40, 10, "Weighted Outcome", border=1, align="C")
+        pdf.cell(30, 10, "Total Votes", border=1, align="C")
+        pdf.ln()
+
+        pdf.set_font("Arial", size=10)
+        for q, outcome in zip(venue_questions, tutorial_vanue_outcome):
+            outcome_label, total_votes = outcome  # unpack tuple
+            pdf.cell(120, 10, q, border=1, align="C")
+            pdf.cell(40, 10, str(outcome_label), border=1, align="C")
+            pdf.cell(30, 10, str(total_votes), border=1, align="C")
+            pdf.ln()
 
 
         
