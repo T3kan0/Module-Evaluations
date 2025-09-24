@@ -239,11 +239,10 @@ if eval_files is not None:
             return counts, total_votes 
         
            
-        # --- 1. Text Cleaning ---
         def clean_text(text):
-            text = text.lower()
-            text = re.sub(r"[^a-z\s]", "", text)  # remove punctuation/numbers
-            return text
+            text = str(text).lower() if text is not None else ""
+            return re.sub(r"[^a-z\s]", "", text)
+
 
 
         ### Categoric labels to characterize data outcomes
