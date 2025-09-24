@@ -1769,18 +1769,18 @@ which are used to improve A_STEP sevices.').format()
         pdf.cell(0, 5, txt = '', ln =15, align = 'C')
         pdf.ln(0.25)
         pdf.set_font('Arial','',10.0)
-        sa = ('The following section presents the findings from the evaluation analysis of the A_STEP module '+str(f_name[0])+', during the first term of the 2024 calendar year (2241). \
+        sa = ('The following section presents the findings from the evaluation analysis of the A_STEP module '+str(f_name[0])+', during the first term of the 2025 calendar year (2252). \
 The data employed in this analysis was collected from A_STEP students of the module through QuestBack Essential survey forms, comprised of nearly a dozen evaluation questions. \
-The aim of this report is to investigate if A_STEP attendees are satisfied with the services of the programme during the 2241 term, in relation with the content provided, tutor performance, \
+The aim of this report is to investigate if A_STEP attendees are satisfied with the services of the programme during the 2252 term, in relation with the content provided, tutor performance, \
 teaching, learning and more. Additionally, we studied responses to identify attendance challanges, A_STEP marketability, as well as recommendations to be implemented in the future.').format()
         pdf.multi_cell(0, 5, txt = str(sa), align = 'L')
         pdf.cell(0, 5, txt = '', ln =15, align = 'C')
         pdf.ln(0.25)
         if ProgN >= 2:
-            s5 = ('The module '+str(f_name[0])+' was evaluated by '+str(Tutor_cnt[0])+' A_STEP students during the first term of 2024. The participants were enrolled on the \
+            s5 = ('The module '+str(f_name[0])+' was evaluated by '+str(Tutor_cnt[0])+' A_STEP students during the second term of 2025. The participants were enrolled on the \
 '+str(camp[0][0])+', in the '+str(Prog[0][0])+' and '+str(Prog[0][1])+' programmes. They speak '+str(Lang[0])+' languages, and came in '+str(gend[0])+' various genders.')
         else:
-            s5 = ('The module '+str(f_name[0])+' was evaluated by '+str(Tutor_cnt[0])+' A_STEP students during the first term of 2024. The participants were enrolled on the \
+            s5 = ('The module '+str(f_name[0])+' was evaluated by '+str(Tutor_cnt[0])+' A_STEP students during the second term of 2025. The participants were enrolled on the \
 '+str(camp[0][0])+', in the '+str(Prog[0][0])+' programme. They speak '+str(Lang[0])+' languages, and came in '+str(gend[0])+' various genders.')
         pdf.multi_cell(0, 5, txt = str(s5), align = 'L')
         pdf.cell(0, 5, txt = '', ln =15, align = 'C')
@@ -2233,31 +2233,15 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.image(str(s28), x = 50, y = 90, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.add_page()
-        pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.11. Select the tutorial mode used.', ln =14, align = 'L')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C') 
-        s29 = 'mode.png'
-        s291 = 'mode2.png'
-        s292 = 'mode3.png'        
+        #pdf.set_font('Arial','B',10.0)
+        #pdf.cell(0, 5, txt = '3.1.11. Select the tutorial mode used.', ln =14, align = 'L')
+        #pdf.cell(0, 5, txt = '', ln =19, align = 'C') 
+        #s29 = 'mode.png'
+        #s291 = 'mode2.png'
+        #s292 = 'mode3.png'        
         #pdf.image(str(s29), x = 20, y = 20, w = 60, h = 60, type = 'PNG')
         #pdf.image(str(s291), x = 80, y = 20, w = 60, h = 60, type = 'PNG')
-        #pdf.image(str(s292), x = 140, y = 20, w = 60, h = 60, type = 'PNG')        
-        pdf.ln(0.25)        
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C')   
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C')        
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C')   
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =20, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-        pdf.cell(0, 5, txt = '', ln =19, align = 'C')               
+        #pdf.image(str(s292), x = 140, y = 20, w = 60, h = 60, type = 'PNG')                      
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '3.1.12. The following outcomes are on the perception of the tutorial venue (Face-to-face sessions):', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
