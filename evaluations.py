@@ -1615,32 +1615,8 @@ if eval_files is not None:
         plt.savefig('word_count2.png')
 
 
-        #df4["themes"] = df4["24: How do you think A_STEP tutorials can be improved?"].apply(clean_text)
-        # --- 2. Vectorization ---
-        vectorizer = CountVectorizer(stop_words="english")
-        X = vectorizer.fit_transform(df4["24: How do you think A_STEP tutorials can be improved?"])
 
-        # --- 3. Topic modeling (as proxy for themes) ---
-        nmf = NMF(n_components=2, random_state=42)
-        W = nmf.fit_transform(X)
-        H = nmf.components_
-
-        # --- Create wordclouds for each theme ---
-        fig, axes = plt.subplots(1, 2, figsize=(14, 6))
-        for i, topic in enumerate(H):  # H has shape (n_components, n_features)
-            # word: weight dict
-            word_weights = {words[j]: topic[j] for j in range(len(words))}
-
-            wc = WordCloud(width=600, height=400,
-                   background_color="white",
-                   colormap="viridis").generate_from_frequencies(word_weights)
-
-            axes[i].imshow(wc, interpolation="bilinear")
-            axes[i].axis("off")
-            axes[i].set_title(f"Theme {i+1}", fontsize=14)
-        plt.tight_layout()
-        plt.savefig('word_count3.png')
-
+        
 
 ### Automated Paragraphs: Narratives
         # Q 16
