@@ -240,8 +240,16 @@ if eval_files is not None:
         
            
         def clean_text(text):
-            text = str(text).lower() if text is not None else ""
-            return re.sub(r"[^a-z\s]", "", text)
+            # Handle None / NaN
+            if pd.isna(text):
+                return ""
+    
+            # Convert everything else to string
+            text = str(text).lower()
+    
+            # Keep only letters + spaces
+            text = re.sub(r"[^a-z\s]", "", text)
+            return text.strip()
 
 
 
