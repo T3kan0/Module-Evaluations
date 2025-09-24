@@ -1615,10 +1615,10 @@ if eval_files is not None:
         plt.savefig('word_count2.png')
 
 
-        df4["themes"] = df4["24: How do you think A_STEP tutorials can be improved?"].apply(clean_text)
+        #df4["themes"] = df4["24: How do you think A_STEP tutorials can be improved?"].apply(clean_text)
         # --- 2. Vectorization ---
         vectorizer = CountVectorizer(stop_words="english")
-        X = vectorizer.fit_transform(df4["themes"])
+        X = vectorizer.fit_transform(df4["24: How do you think A_STEP tutorials can be improved?"])
 
         # --- 3. Topic modeling (as proxy for themes) ---
         nmf = NMF(n_components=2, random_state=42)
