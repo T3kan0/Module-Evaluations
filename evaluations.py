@@ -1387,7 +1387,7 @@ if eval_files is not None:
         plt.savefig('factor.png')
 
         
-            # Statemments to present as a collage
+        # Statemments to present as a collage
         df2 = df.dropna(subset=['23: How can tutorials be structured in a way that can encourage you to attend?'])
 
         # Specify the column name
@@ -1612,6 +1612,17 @@ if eval_files is not None:
             spine.set_visible(False)
         plt.savefig('word_count2.png')
 
+
+        df4["themes"] = df4["24: How do you think A_STEP tutorials can be improved?"].apply(clean_text)
+        # --- 2. Vectorization ---
+        vectorizer = CountVectorizer(stop_words="english")
+        X = vectorizer.fit_transform(df4["themes"])
+
+        # --- 3. Topic modeling (as proxy for themes) ---
+        nmf = NMF(n_components=2, random_state=42)
+        W = nmf.fit_transform(X)
+        H = nmf.components_
+        
 ### Automated Paragraphs: Narratives
         # Q 16
         tutorial_organisation_paragraphs = {
