@@ -1616,6 +1616,26 @@ if eval_files is not None:
         W = nmf.fit_transform(X)
         H = nmf.components_
 
+
+        # --- Plot wordclouds for each theme ---
+        fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+
+        for i, topic in enumerate(H):  # H is (n_components, n_features)
+            # Map words to their weights
+            word_weights = {words[j]: topic[j] for j in range(len(words))}
+    
+            wc = WordCloud(width=600, height=400,
+                   background_color="white",
+                   colormap="viridis").generate_from_frequencies(word_weights)
+    
+            axes[i].imshow(wc, interpolation="bilinear")
+            axes[i].axis("off")
+            axes[i].set_title(f"Theme {i+1}", fontsize=16)
+
+        plt.tight_layout()
+        plt.savefig('themes.png')
+
+        
         
 
 ### Automated Paragraphs: Narratives
