@@ -1636,7 +1636,14 @@ if eval_files is not None:
         plt.tight_layout()
         plt.savefig('themes.png')
 
-        
+        # Example DataFrame with top words
+        top_n = 10  
+        theme_words = {}
+        for i, topic in enumerate(H):
+            top_indices = topic.argsort()[-top_n:][::-1]
+            theme_words[f"Theme {i+1}"] = [words[j] for j in top_indices]
+
+        df_themes = pd.DataFrame(theme_words)       
         
 
 ### Automated Paragraphs: Narratives
