@@ -238,15 +238,6 @@ if eval_files is not None:
 
             return counts, total_votes 
         
-           
-        
-        def clean_text(text):
-            # force everything into a string
-            text = str(text).lower()
-            text = re.sub(r"[^a-z\s]", "", text)  # keep letters and spaces
-            return text.strip()
-
-
 
         ### Categoric labels to characterize data outcomes
 
