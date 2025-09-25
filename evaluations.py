@@ -2699,18 +2699,27 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.add_page()                             
         # Title
         pdf.cell(200, 10, "Top Words per Theme", ln=True, align="C")
-        # Column headers
-        col_width = pdf.w / (len(df_themes.columns) + 1)
+                
+        # Table settings
+        col_width = 40  # fixed width for each column
         row_height = pdf.font_size * 1.5
-        for col in df_themes.columns:
-            pdf.cell(col_width, row_height, col, border=1, align="C")
-        pdf.ln(row_height)
-        # Table rows
-        for i in range(len(df_themes)):
-            for col in df_themes.columns:
-                pdf.cell(col_width, row_height, str(df_themes[col].iloc[i]), border=1, align="C")
+        table_width = col_width * len(df_themes.columns)
+
+        # --- Function to print a row centered ---
+        def print_row(values):
+            # set x so that the row is centered
+            pdf.set_x((pdf.w - table_width) / 2)
+            for val in values:
+                pdf.cell(col_width, row_height, str(val), border=1, align="C")
             pdf.ln(row_height)
 
+        # Column headers
+        print_row(df_themes.columns)
+
+        # Table rows
+        for i in range(len(df_themes)):
+            print_row(df_themes.iloc[i])     
+        
         pdf.ln(0.25)
 
         pdf.output('A_STEP_IR_2019_2022.pdf')
