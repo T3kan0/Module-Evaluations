@@ -2704,7 +2704,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         col_width = 40  # fixed width for each column
         row_height = pdf.font_size * 1.5
         table_width = col_width * len(df_themes.columns)
-
+        pdf.set_font('Arial','',10.0)
         # --- Function to print a row centered ---
         def print_row(values):
             # set x so that the row is centered
