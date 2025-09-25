@@ -1605,7 +1605,16 @@ if eval_files is not None:
             spine.set_visible(False)
         plt.savefig('word_count2.png')
 
+        df_themes = df.dropna(subset=['24: How do you think A_STEP tutorials can be improved?'])
 
+        # --- 2. Vectorization ---
+        vectorizer = CountVectorizer(stop_words="english")
+        X = vectorizer.fit_transform(df_themes["24: How do you think A_STEP tutorials can be improved?"].astype(str))
+
+        # --- 3. Topic modeling (as proxy for themes) ---
+        nmf = NMF(n_components=2, random_state=42)
+        W = nmf.fit_transform(X)
+        H = nmf.components_
 
         
 
