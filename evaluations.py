@@ -2697,12 +2697,22 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.image(str(s52), x = 35, y = 190, w = 130, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.add_page()                             
-        s53 = 'word_count2.png'
-        pdf.image(str(s53), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
+        # Title
+        pdf.cell(200, 10, "Top Words per Theme", ln=True, align="C")
+        # Column headers
+        col_width = pdf.w / (len(df_themes.columns) + 1)
+        row_height = pdf.font_size * 1.5
+        for col in df_themes.columns:
+            pdf.cell(col_width, row_height, col, border=1, align="C")
+        pdf.ln(row_height)
+        # Table rows
+        for i in range(len(df_themes)):
+            for col in df_themes.columns:
+                pdf.cell(col_width, row_height, str(df_themes[col].iloc[i]), border=1, align="C")
+            pdf.ln(row_height)
+
         pdf.ln(0.25)
 
-
-        
         pdf.output('A_STEP_IR_2019_2022.pdf')
         with st.spinner('Wait for it...'):
                     time.sleep(3)
