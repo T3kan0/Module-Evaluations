@@ -1619,7 +1619,8 @@ if eval_files is not None:
 
         # --- Plot wordclouds for each theme ---
         fig, axes = plt.subplots(1, 2, figsize=(14, 6))
-
+        # Display top words per theme
+        words = vectorizer.get_feature_names_out()
         for i, topic in enumerate(H):  # H is (n_components, n_features)
             # Map words to their weights
             word_weights = {words[j]: topic[j] for j in range(len(words))}
