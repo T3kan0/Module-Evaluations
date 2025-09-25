@@ -2686,7 +2686,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.set_font('Arial','B',10.0)        
         pdf.cell(0, 5, txt = '3.1.15. How do you think A_STEP tutorials can be improved?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-        s52 = 'improve2.png'
+        s52 = 'themes.png'
         pdf.image(str(s52), x = 35, y = 190, w = 130, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.add_page()                             
