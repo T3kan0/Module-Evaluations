@@ -2716,14 +2716,14 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         # Column headers
         pdf.set_font('Arial','B',10.0)
         print_row(df_themes.columns)
-
+        pdf.set_font('Arial','',10.0)
         # Table rows
         for i in range(len(df_themes)):
             print_row(df_themes.iloc[i])     
         
         pdf.ln(0.25)
 
-        pdf.output('A_STEP_IR_2019_2022.pdf')
+        pdf.output('A_STEP_ER_2025.pdf')
         with st.spinner('Wait for it...'):
                     time.sleep(3)
         #with col1:
@@ -2733,11 +2733,11 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         progress_bar.progress(perc_completed+1)
         st.success(':orange[Module '+str(f_name[0])+' successfully Evaluated 👏🏼 👏🏾 👏🏿]', icon="✅")
         st.write(':blue[Survey : '+str(Tutor_cnt[0])+' Participants 👥]')
-        with open('A_STEP_IR_2019_2022.pdf', "rb") as file:
+        with open('A_STEP_ER_2025.pdf', "rb") as file:
                 btn = st.download_button(
                 label=":red[Download PDF Report]",
                 data=file,
-                file_name='A_STEP_IR_2019_2022.pdf',
+                file_name='A_STEP_ER_2025.pdf',
                 mime="file/pdf"
                   )  
                 st.success('Report Ready for Download', icon="✅")
