@@ -2277,7 +2277,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.11. The following outcomes are on the perception of the tutorial venue (Face-to-face sessions):', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.10. The following outcomes are on the perception of the tutorial venue (Face-to-face sessions):', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','',10.0)
         pdf.multi_cell(0, 5, txt = str(tutorial_venue_final_paragraph), align = 'L', fill = False)
@@ -2311,7 +2311,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
 
         pdf.add_page()
         pdf.set_font('Arial','B',10.0)       
-        pdf.cell(0, 5, txt = '3.1.11.1. The venue where the tutorials took place was conducive to learning?', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.10.1. The venue where the tutorials took place was conducive to learning?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')         
         pdf.ln(0.25)
         s30 = 'conducive.png'
@@ -2333,7 +2333,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         #pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         #pdf.cell(0, 5, txt = '', ln =19, align = 'C')               
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.11.2. The venue was spacious enough to accommodate the student(s)?', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.10.2. The venue was spacious enough to accommodate the student(s)?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         s31 = 'spacious.png'
         pdf.image(str(s31), x = 50, y = 100, w = 100, h = 70, type = 'PNG')
@@ -2352,13 +2352,13 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.11.3. The venue made you comfortable to interact with your tutors?', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.10.3. The venue made you comfortable to interact with your tutors?', ln =14, align = 'L')
         s32 = 'inter.png'
         pdf.image(str(s32), x = 50, y = 170, w = 100, h = 70, type = 'PNG')
         
         pdf.add_page()                           
         pdf.set_font('Arial','B',10.0)        
-        pdf.cell(0, 5, txt = '3.1.11.4. The venue made you comfortable to interact with your classmates?', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.10.4. The venue made you comfortable to interact with your classmates?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         s33 = 'interct.png'
         pdf.image(str(s33), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
@@ -2379,7 +2379,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         #pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         #pdf.cell(0, 5, txt = '', ln =19, align = 'C')               
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.11.5. The venue had proper lighting?', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.10.5. The venue had proper lighting?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         s34 = 'light.png'
         pdf.image(str(s34), x = 50, y = 100, w = 100, h = 70, type = 'PNG')
@@ -2398,7 +2398,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.11.6. The venue had proper ventilation?', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.10.6. The venue had proper ventilation?', ln =14, align = 'L')
         s35 = 'vent.png'
         pdf.image(str(s35), x = 50, y = 170, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)        
@@ -2542,7 +2542,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         #pdf.ln(0.25)
         pdf.add_page()                            
         pdf.set_font('Arial','B',10.0)        
-        pdf.cell(0, 5, txt = '3.1.12. The following questions are on the perception of the tutorial Platform (online sessions):', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.11. The following questions are on the perception of the tutorial Platform (online sessions):', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','',10.0)
         pdf.multi_cell(0, 5, txt = str(tutorial_venue_final_paragraph2), align = 'L', fill = False)
@@ -2575,7 +2575,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')       
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.12.1. The platform where the tutorials took place was conducive to learning?', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.11.1. The platform where the tutorials took place was conducive to learning?', ln =14, align = 'L')
         s45 = 'conducive3.png'
         pdf.image(str(s45), x = 50, y = 120, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
@@ -2595,14 +2595,14 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         #pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         #pdf.cell(0, 5, txt = '', ln =19, align = 'C')               
         pdf.set_font('Arial','B',10.0)        
-        pdf.cell(0, 5, txt = '3.1.12.2. The platform made you comfortable to interact with the tutor?', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.11.2. The platform made you comfortable to interact with the tutor?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         s46 = 'inter3.png'
         pdf.image(str(s46), x = 50, y = 190, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.add_page()               
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.12.3. The platform made you comfortable to interact with the classmates?', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.11.3. The platform made you comfortable to interact with the classmates?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')  
         s47 = 'interct3.png'
         pdf.image(str(s47), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
@@ -2623,7 +2623,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         #pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         #pdf.cell(0, 5, txt = '', ln =19, align = 'C')               
         pdf.set_font('Arial','B',10.0)        
-        pdf.cell(0, 5, txt = '3.1.12.4. The platform was easy to navigate?', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.11.4. The platform was easy to navigate?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         s48 = 'navi1.png'
         pdf.image(str(s48), x = 50, y = 95, w = 100, h = 70, type = 'PNG')
@@ -2644,14 +2644,14 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         #pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         #pdf.cell(0, 5, txt = '', ln =19, align = 'C')               
         pdf.set_font('Arial','B',10.0)        
-        pdf.cell(0, 5, txt = '3.1.13. Factors limiting your tutorial attendance?', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.12. Factors limiting your tutorial attendance?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         s49 = 'factor.png'
         pdf.image(str(s49), x = 50, y = 170, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.add_page()                             
         pdf.set_font('Arial','B',10.0)        
-        pdf.cell(0, 5, txt = '3.1.14. How can tutorials be structured in a way that can encourage you to attend?', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.13. How can tutorials be structured in a way that can encourage you to attend?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         s50 = 'encourage.png'
         pdf.image(str(s50), x = 35, y = 20, w = 130, h = 70, type = 'PNG')
@@ -2691,7 +2691,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')             
         pdf.set_font('Arial','B',10.0)        
-        pdf.cell(0, 5, txt = '3.1.15. How do you think A_STEP tutorials can be improved?', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.14. How do you think A_STEP tutorials can be improved?', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         s52 = 'themes.png'
         pdf.image(str(s52), x = 35, y = 190, w = 130, h = 70, type = 'PNG')
