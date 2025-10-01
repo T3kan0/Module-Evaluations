@@ -2714,6 +2714,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
             pdf.ln(row_height)
 
         # Column headers
+        pdf.set_font('Arial','B',10.0)
         print_row(df_themes.columns)
 
         # Table rows
