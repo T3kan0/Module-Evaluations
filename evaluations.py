@@ -1903,7 +1903,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')        
-        pdf.cell(0, 5, txt = '3.1.6. How did you hear about A_STEP tutorials for this module?', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.5. How did you hear about A_STEP tutorials for this module?', ln =14, align = 'L')
         pdf.ln(0.25)
         s11 = 'market.png'
         pdf.image(str(s11), x = 50, y = 105, w = 100, h = 70, type = 'PNG')
@@ -1924,7 +1924,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')        
-        pdf.cell(0, 5, txt = '3.1.7. What motivated you to attend tutorials? (Select all options that apply)', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.6. What motivated you to attend tutorials? (Select all options that apply)', ln =14, align = 'L')
         pdf.ln(0.25)
         s12 = 'motiv.png'
         pdf.image(str(s12), x = 50, y = 185, w = 100, h = 70, type = 'PNG')
@@ -1932,7 +1932,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.add_page()
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-        txt = '3.1.8. Are you familiar with the concept of multilingualism or the use of multiple languages (in addition to \n English) in tutorial sessions?'
+        txt = '3.1.7. Are you familiar with the concept of multilingualism or the use of multiple languages (in addition to \n English) in tutorial sessions?'
         pdf.multi_cell(0, 5, txt = str(txt), align = 'L', fill = False)
         s13 = 'mutiling.png'
         pdf.image(str(s13), x = 50, y = 25, w = 100, h = 70, type = 'PNG')
@@ -1952,7 +1952,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.9. The following outcomes are on the perception of the tutorial sessions:', ln =14, align = 'L')
+        pdf.cell(0, 5, txt = '3.1.8. The following outcomes are on the perception of the tutorial sessions:', ln =14, align = 'L')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','',10.0)
         pdf.multi_cell(0, 5, txt = str(tutorial_org_final_paragraph), align = 'L', fill = False) 
@@ -1986,7 +1986,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
 
         pdf.add_page()
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.9.1. Tutorial sessions helped me understand the concepts better?', ln =14, align = 'L')        
+        pdf.cell(0, 5, txt = '3.1.8.1. Tutorial sessions helped me understand the concepts better?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s14 = 'concepts.png'
         pdf.image(str(s14), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
@@ -2005,7 +2005,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.9.2. I found the tutorial sessions helpful to my learning?', ln =14, align = 'L')        
+        pdf.cell(0, 5, txt = '3.1.8.2. I found the tutorial sessions helpful to my learning?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s15 = 'tuthelp.png'
         pdf.image(str(s15), x = 50, y = 90, w = 100, h = 70, type = 'PNG')
@@ -2024,7 +2024,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')         
         pdf.set_font('Arial','B',10.0)
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-        pdf.cell(0, 5, txt = '3.1.9.3. The tutorial sessions help me improve my academic performance?', ln =14, align = 'L')        
+        pdf.cell(0, 5, txt = '3.1.8.3. The tutorial sessions help me improve my academic performance?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s16 = 'improve.png'
         pdf.image(str(s16), x = 50, y = 160, w = 100, h = 70, type = 'PNG')
@@ -2034,7 +2034,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')   
         pdf.add_page()
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.9.4. I found the tutorial sessions well-planned?', ln =14, align = 'L')        
+        pdf.cell(0, 5, txt = '3.1.8.4. I found the tutorial sessions well-planned?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s17 = 'plan.png'
         pdf.image(str(s17), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
@@ -2054,7 +2054,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')       
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.9.5. I found the tutorial sessions well structured?', ln =14, align = 'L')        
+        pdf.cell(0, 5, txt = '3.1.8.5. I found the tutorial sessions well structured?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s18 = 'structure.png'
         pdf.image(str(s18), x = 50, y = 100, w = 100, h = 70, type = 'PNG')
@@ -2076,14 +2076,14 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
-        pdf.cell(0, 5, txt = '3.1.9.6. Tutorial sessions helped me feel prepared for assessments?', ln =14, align = 'L')        
+        pdf.cell(0, 5, txt = '3.1.8.6. Tutorial sessions helped me feel prepared for assessments?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s19 = 'prep.png'
         pdf.image(str(s19), x = 50, y = 180, w = 100, h = 70, type = 'PNG')
         pdf.ln(0.25)
         pdf.add_page()      
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.9.7. The tutorial sessions helped me improve my communication skills?', ln =14, align = 'L')        
+        pdf.cell(0, 5, txt = '3.1.8.7. The tutorial sessions helped me improve my communication skills?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s20 = 'comm.png'
         pdf.image(str(s20), x = 50, y = 20, w = 100, h = 70, type = 'PNG')
@@ -2103,7 +2103,7 @@ teaching, learning and more. Additionally, we studied responses to identify atte
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')
         pdf.cell(0, 5, txt = '', ln =19, align = 'C')       
         pdf.set_font('Arial','B',10.0)
-        pdf.cell(0, 5, txt = '3.1.9.8. I would recommend tutorials to other students?', ln =14, align = 'L')        
+        pdf.cell(0, 5, txt = '3.1.8.8. I would recommend tutorials to other students?', ln =14, align = 'L')        
         pdf.ln(0.25)
         s21 = 'recc.png'
         pdf.image(str(s21), x = 50, y = 100, w = 100, h = 70, type = 'PNG')
