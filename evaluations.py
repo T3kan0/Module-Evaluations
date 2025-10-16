@@ -5,8 +5,6 @@ Created on Sat Nov  19 08:37:00 2021
 
 @author: nt4-nani
 """
-
-
 import streamlit as st
 import pandas as pd
 import time
@@ -27,17 +25,13 @@ import builtins
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import NMF
 
-
 st.set_page_config(
     page_title="Evaluations",
     page_icon="🧊",
     layout="wide",
     initial_sidebar_state="expanded",
 )
-
-
 st.sidebar.markdown("![Alt Text](https://i.postimg.cc/gJzPdRYd/logio.png)")
-
 
 eval_files = st.sidebar.file_uploader(' ',
                                      type=['xlsx', 'csv'],
