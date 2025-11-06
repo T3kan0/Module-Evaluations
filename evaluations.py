@@ -259,26 +259,26 @@ if eval_files is not None:
   
         # Line plot for mean final marks
         # Create a second y-axis for mean final marks
-        ax2 = ax0.twinx()
+        #ax2 = ax0.twinx()
     
-        ax2.plot(gend_data['4.0: What is your gender?'], gend_data['5.0: What is your home language?'], color='firebrick', marker='o', label='Home Languages')
-        ax2.set_ylabel('Home Languages', color='k')
-        ax2.tick_params('y', colors='firebrick')
+        #ax2.plot(gend_data['4.0: What is your gender?'], gend_data['5.0: What is your home language?'], color='firebrick', marker='o', label='Home Languages')
+        #ax2.set_ylabel('Home Languages', color='k')
+        #ax2.tick_params('y', colors='firebrick')
         # Set y-axis limits for the second subplot
-        ax2.set_ylim(0, 15)  # Adjust the multiplier as needed
+        #ax2.set_ylim(0, 15)  # Adjust the multiplier as needed
         # Remove plot borders (spines)
-        for spine in ax2.spines.values():
-            spine.set_visible(False)
+        #for spine in ax2.spines.values():
+            #spine.set_visible(False)
 
 
-        plt.title('Comparison of Students and Home Languages per Gender')
+        plt.title('Comparison of Students Per Gender')
         fig0.tight_layout(rect=[0, 0, 1.0, 1])  # Adjust the rect parameter as needed
         # Manually set the legend position
         fig0.legend(loc='upper right', bbox_to_anchor=(0.9, .93))
         # Add text annotations to the line plot
-        for i, value in enumerate(gend_data['5.0: What is your home language?']):
-            plt.text(x=gend_data['4.0: What is your gender?'][i], y=value + 1, s='%.2f' % value,
-                 fontsize=10, ha='center', color='purple')
+        #for i, value in enumerate(gend_data['5.0: What is your home language?']):
+            #plt.text(x=gend_data['4.0: What is your gender?'][i], y=value + 1, s='%.2f' % value,
+                 #fontsize=10, ha='center', color='purple')
         plt.grid(axis='y', linestyle='--', alpha=0.7)            
         plt.savefig('marksVstd.png')
 
